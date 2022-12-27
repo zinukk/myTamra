@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { AppProps } from 'next/app';
 import { Global, ThemeProvider } from '@emotion/react';
 import { QueryClient, QueryClientProvider } from 'react-query';
@@ -6,7 +7,7 @@ import global from 'styles/global';
 import theme from 'styles/theme';
 
 const App = ({ Component, pageProps }: AppProps) => {
-  const queryClient = new QueryClient();
+  const [queryClient] = useState(() => new QueryClient());
 
   return (
     <QueryClientProvider client={queryClient}>
