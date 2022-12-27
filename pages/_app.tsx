@@ -2,8 +2,8 @@ import type { AppProps } from 'next/app';
 import { Global, ThemeProvider } from '@emotion/react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { RecoilRoot } from 'recoil';
-import theme from 'styles/theme';
 import global from 'styles/global';
+import theme from 'styles/theme';
 
 const App = ({ Component, pageProps }: AppProps) => {
   const queryClient = new QueryClient();
