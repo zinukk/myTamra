@@ -11,3 +11,8 @@ interface Color {
   gray900: string;
   gray950: string;
 }
+
+declare module '*.jpg';
+declare module '*.png';
+declare module '*.jpeg';
+declare module '*.gif';
