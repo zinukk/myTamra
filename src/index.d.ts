@@ -1,6 +1,7 @@
 interface Color {
   mainColor: string;
   subColor: string;
+  disabledColor: string;
   backgroundColor: string;
   whiteColor: string;
   blackColor: string;
