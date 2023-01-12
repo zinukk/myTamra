@@ -20,6 +20,8 @@ const global = css`
   input,
   button {
     outline: none;
+    border: none;
+    cursor: pointer;
   }
 
   body,
