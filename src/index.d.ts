@@ -13,6 +13,21 @@ interface Color {
   gray950: string;
 }
 
+interface IOption {
+  id: number;
+  text: string;
+}
+
+interface ISelect {
+  first: number;
+  second: number;
+  third: number;
+  fourth: number;
+  fifth: number;
+  sixth: number;
+  seventh: number;
+}
+
 declare module '*.jpg';
 declare module '*.png';
 declare module '*.jpeg';
