@@ -1,35 +1,17 @@
+import React, { useState } from 'react';
+import { useRouter } from 'next/router';
+import { useRecoilValue } from 'recoil';
+import { selectedState } from '@src/store/selectedState';
 import styled from '@emotion/styled';
 import FirstPage from '@src/components/select/FirstPage';
 import SecondPage from '@src/components/select/SecondPage';
-import { useRouter } from 'next/router';
-import React, { useState } from 'react';
-
-interface ISelect {
-  first: number;
-  second: number;
-  third: number;
-  fourth: number;
-  fifth: number;
-  sixth: number;
-  seventh: number;
-}
 
 const Select = () => {
   const router = useRouter();
 
-  const [pageIdx, setPageIdx] = useState<number>(1);
+  const [pageIdx, setPageIdx] = useState<number>(0);
 
-  const [selectedInfo, setSelectedInfo] = useState<ISelect>({
-    first: 0,
-    second: 0,
-    third: 0,
-    fourth: 0,
-    fifth: 0,
-    sixth: 0,
-    seventh: 0,
-  });
-
-  console.log(selectedInfo.first);
+  const selectedInfo = useRecoilValue<ISelect>(selectedState);
 
   const pages = [<FirstPage key={0} />, <SecondPage key={1} />];
 
