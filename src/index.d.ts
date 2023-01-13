@@ -28,6 +28,18 @@ interface ISelect {
   seventh: number;
 }
 
+interface Button {
+  key: number;
+  option: string;
+}
+
+interface Question {
+  id: number;
+  state: string;
+  title: string;
+  button: Button[];
+}
+
 declare module '*.jpg';
 declare module '*.png';
 declare module '*.jpeg';
