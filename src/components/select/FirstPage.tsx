@@ -10,7 +10,7 @@ interface IProps {
 }
 
 const FirstPage = ({ selectedValues, setPageIdx }: IProps) => {
-  const isValid = (key: number) => {
+  const hasValue = (key: number) => {
     return selectedValues[key] !== 0;
   };
 
@@ -18,15 +18,15 @@ const FirstPage = ({ selectedValues, setPageIdx }: IProps) => {
     <StFirstPage>
       <StBody>
         {FIRST_QUESTION.map(({ id, state, title, button }) => (
-          <>{isValid(id - 1) && <Question key={id} state={state} title={title} button={button} />}</>
+          <>{hasValue(id - 1) && <Question key={id} state={state} title={title} button={button} />}</>
         ))}
       </StBody>
-      {isValid(2) && (
+      {hasValue(2) && (
         <StFooter>
           <NextIcon
-            fill={isValid(3) ? '#84F5B8' : '#8A8B91'}
+            fill={hasValue(3) ? '#84F5B8' : '#8A8B91'}
             onClick={() => {
-              isValid(3) && setPageIdx((prev) => prev + 1);
+              hasValue(3) && setPageIdx((prev) => prev + 1);
             }}
           />
         </StFooter>
