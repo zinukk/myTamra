@@ -4,20 +4,30 @@ import React from 'react';
 import { useRecoilState } from 'recoil';
 
 interface IProps {
+  state: string;
   title: string;
-  option: IOption[];
+  button: Button[];
 }
 
-const Question = ({ title, option }: IProps) => {
-  const [seletedInfo, setSelectedInfo] = useRecoilState<ISelect>(selectedState);
+const Question = ({ title, button, state }: IProps) => {
+  const [selectedInfo, setSelectedInfo] = useRecoilState<ISelect>(selectedState);
+
+  const buttonHandler = (state: string, key: number) => {
+    setSelectedInfo({ ...selectedInfo, [state]: key });
+  };
 
   return (
     <StQuestion>
       <StHeader>{title}</StHeader>
       <StBody>
-        {option.map(({ id, text }) => (
-          <StButton isSelected={false} key={id}>
-            {text}
+        {button.map(({ key, option }) => (
+          <StButton
+            isSelected={key === selectedInfo[state]}
+            key={key}
+            onClick={() => {
+              buttonHandler(state, key);
+            }}>
+            {option}
           </StButton>
         ))}
       </StBody>
@@ -26,6 +36,7 @@ const Question = ({ title, option }: IProps) => {
 };
 
 const StQuestion = styled.div`
+  margin: 40px 0;
   width: 100%;
 `;
 
