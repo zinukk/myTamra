@@ -12,7 +12,10 @@ const Select = () => {
 
   const selectedValues = Object.values(selectedInfo);
 
-  const pages = [<FirstPage key={0} selectedValues={selectedValues} setPageIdx={setPageIdx} />, <SecondPage key={1} />];
+  const pages = [
+    <FirstPage key={0} selectedValues={selectedValues} setPageIdx={setPageIdx} />,
+    <SecondPage key={1} selectedValues={selectedValues} />,
+  ];
 
   return (
     <StSelect>
@@ -23,6 +26,7 @@ const Select = () => {
 };
 
 const StSelect = styled.div`
+  position: relative;
   padding: 0 20px;
   padding-top: 20px;
   width: 100%;
