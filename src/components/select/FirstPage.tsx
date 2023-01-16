@@ -18,7 +18,7 @@ const FirstPage = ({ selectedValues, setPageIdx }: IProps) => {
     <StFirstPage>
       <StBody>
         {FIRST_QUESTION.map(({ id, state, title, button }) => (
-          <>{hasValue(id - 1) && <Question key={id} state={state} title={title} button={button} />}</>
+          <div key={id}>{hasValue(id - 1) && <Question state={state} title={title} button={button} />}</div>
         ))}
       </StBody>
       {hasValue(2) && (

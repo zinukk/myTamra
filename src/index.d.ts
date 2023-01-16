@@ -19,6 +19,7 @@ interface IOption {
 }
 
 interface ISelect {
+  [index: string]: number;
   first: number;
   second: number;
   third: number;
