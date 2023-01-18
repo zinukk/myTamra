@@ -1,20 +1,43 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import { useRecoilValue } from 'recoil';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { selectedState } from '@src/store/selectedState';
 import FirstPage from '@src/components/select/FirstPage';
 import SecondPage from '@src/components/select/SecondPage';
+import usePostSelected from '@src/hooks/mutation/usePostSelected';
+import client, { baseURL } from '@src/api/client';
+import { useMutation } from 'react-query';
+import SelectAPI from '@src/api/select';
+import { AxiosResponse } from 'axios';
+import { useRouter } from 'next/router';
+import { locationState } from '@src/store/locationState';
 
 const Select = () => {
+  const router = useRouter();
+
+  const setLocationState = useSetRecoilState(locationState);
+
   const selectedInfo = useRecoilValue<ISelect>(selectedState);
 
   const [pageIdx, setPageIdx] = useState<number>(0);
 
   const selectedValues = Object.values(selectedInfo);
 
+  const { mutate: postSelectedMutate } = useMutation((data: ISelect) => SelectAPI.postSelected(data), {
+    onSuccess: (data: AxiosResponse) => {
+      setLocationState(data as any);
+      router.push('/loading');
+    },
+  });
+
   const pages = [
     <FirstPage key={0} selectedValues={selectedValues} setPageIdx={setPageIdx} />,
-    <SecondPage key={1} selectedValues={selectedValues} />,
+    <SecondPage
+      key={1}
+      selectedInfo={selectedInfo}
+      selectedValues={selectedValues}
+      postSelectedMutate={postSelectedMutate}
+    />,
   ];
 
   return (

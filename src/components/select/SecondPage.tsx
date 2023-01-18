@@ -3,10 +3,12 @@ import { SECOND_QUESTION } from '@src/mocks/SECOND_QUESTIONS';
 import Question from '../common/Question';
 
 interface IProps {
+  selectedInfo: ISelect;
   selectedValues: number[];
+  postSelectedMutate: any;
 }
 
-const SecondPage = ({ selectedValues }: IProps) => {
+const SecondPage = ({ selectedInfo, selectedValues, postSelectedMutate }: IProps) => {
   const hasValue = (key: number) => {
     return selectedValues[key] !== 0;
   };
@@ -21,7 +23,13 @@ const SecondPage = ({ selectedValues }: IProps) => {
         ))}
       </StBody>
       <StFooter>
-        <StButton canSubmit={canSubmit}>결과 보기</StButton>
+        <StButton
+          onClick={() => {
+            postSelectedMutate(selectedInfo);
+          }}
+          canSubmit={canSubmit}>
+          결과 보기
+        </StButton>
       </StFooter>
     </StSecondPage>
   );
