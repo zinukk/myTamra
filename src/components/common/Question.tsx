@@ -15,7 +15,7 @@ const Question = ({ title, button, state }: IProps) => {
   const buttonHandler = (state: string, key: number) => {
     setSelectedInfo({ ...selectedInfo, [state]: key });
   };
-  console.log(selectedInfo[state]);
+
   return (
     <StQuestion>
       <StHeader>{title}</StHeader>
