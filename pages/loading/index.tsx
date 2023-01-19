@@ -1,16 +1,20 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import styled from '@emotion/styled';
+import { coastState } from '@src/store/coastState';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
+import { useRecoilValue } from 'recoil';
 import Spinner from '../../public/assets/images/image_spinner.gif';
 
 const loading = () => {
+  const coast = useRecoilValue(coastState);
+
   const router = useRouter();
 
   useEffect(() => {
     setTimeout(() => {
-      router.push('/result');
+      router.push(`/result/${coast}`);
     }, 2000);
   }, []);
 
