@@ -3,6 +3,7 @@ import { Theme } from '@emotion/react';
 const color = {
   mainColor: '#84F5B8',
   subColor: '#ABC2A7',
+  redColor: '#FF5858',
   disabledColor: '#8A8B91',
   backgroundColor: '#1E2029',
   whiteColor: '#fff',
@@ -19,6 +20,7 @@ const theme: Theme = {
   color: {
     mainColor: color.mainColor,
     subColor: color.subColor,
+    redColor: color.redColor,
     backgroundColor: color.backgroundColor,
     whiteColor: color.whiteColor,
     blackColor: color.blackColor,
