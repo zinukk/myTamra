@@ -6,6 +6,7 @@ import Image from 'next/image';
 import ResultCoast from './ResultCoast';
 import ResultLocation from './ResultLocation';
 import ResultCreature from './ResultCreature';
+import ResultPlace from './ResultPlace';
 
 const ResultList = () => {
   const dateType = 'today';
@@ -25,6 +26,35 @@ const ResultList = () => {
     { image: '', name: '선침거미불가사리', kind: '교란종' },
   ];
 
+  const place = [
+    {
+      image:
+        'https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20211111_294%2F1636615619411QWHLd_JPEG%2F9657B55B-F714-4EB3-8AD5-EC1DAF597A20.jpeg',
+      url: 'https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20211111_294%2F1636615619411QWHLd_JPEG%2F9657B55B-F714-4EB3-8AD5-EC1DAF597A20.jpeg',
+      name: '범섬 칼국수',
+      location: '서귀포시 어쩌고',
+      time: '10:00 ~ 22:00',
+    },
+    {
+      image:
+        'https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20211111_294%2F1636615619411QWHLd_JPEG%2F9657B55B-F714-4EB3-8AD5-EC1DAF597A20.jpeg',
+      url: 'https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20211111_294%2F1636615619411QWHLd_JPEG%2F9657B55B-F714-4EB3-8AD5-EC1DAF597A20.jpeg',
+      name: '더그랜드섬오름 본관',
+      location: '서귀포시 어쩌고',
+      time: '10:00 ~ 22:00',
+    },
+    {
+      image:
+        'https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20211111_294%2F1636615619411QWHLd_JPEG%2F9657B55B-F714-4EB3-8AD5-EC1DAF597A20.jpeg',
+      url: 'https://search.pstatic.net/common/?autoRotate=true&quality=100&type=f640_380&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20211111_294%2F1636615619411QWHLd_JPEG%2F9657B55B-F714-4EB3-8AD5-EC1DAF597A20.jpeg',
+      name: '법환어촌계해녀체험센터',
+      location: '서귀포시 어쩌고',
+      time: '10:00 ~ 22:00',
+    },
+  ];
+
+  const isToday = dateType === 'today';
+
   return (
     <StResultList>
       <StHeader>
@@ -41,6 +71,7 @@ const ResultList = () => {
         <ResultCoast coastalImage={coastalImage} coastalContent={coastalContent} />
         <ResultLocation location={location} locationImage={locationImage} />
         <ResultCreature holdingCreature={holdingCreature} />
+        <ResultPlace dateType={dateType} place={place} />
       </StBody>
     </StResultList>
   );
