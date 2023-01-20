@@ -3,29 +3,46 @@ import ResultAPI from '@src/api/result';
 import Modal from '@src/components/common/Modal';
 import { useState } from 'react';
 import { dehydrate, QueryClient } from 'react-query';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper.min.css';
+import 'swiper/components/navigation/navigation.min.css';
+import SwiperCore, { Navigation } from 'swiper';
+import ResultList from '@src/components/result/ResultList';
 
-export const getServerSideProps = async (ctx: any) => {
-  const coast = ctx.params.coast;
+// export async function getServerSideProps(context: any) {
+//   const coast = context.params.coast;
 
-  const queryClient = new QueryClient();
+//   const queryClient = new QueryClient();
 
-  await queryClient.prefetchQuery('resultState', async () => await ResultAPI.getResult(coast));
+//   await queryClient.prefetchQuery('resultState', async () => await ResultAPI.getResult(coast));
 
-  return {
-    props: {
-      result: dehydrate(queryClient).queries[0].state.data,
-    },
-  };
-};
+//   return {
+//     props: {
+//       result: dehydrate(queryClient).queries[0].state.data,
+//     },
+//   };
+// }
 
 const result = ({ result }: Result[]) => {
   const [openModal, setOpenModal] = useState<boolean>(true);
 
-  const [present, future] = result;
+  // const [present, future] = result;
 
-  console.log(result);
+  SwiperCore.use([Navigation]);
 
-  return <StResult isModalOpen={openModal}>{openModal && <Modal setOpenModal={setOpenModal} />}</StResult>;
+  return (
+    <StResult isModalOpen={openModal}>
+      <Swiper>
+        <SwiperSlide>
+          <ResultList />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ResultList />
+        </SwiperSlide>
+      </Swiper>
+      {/* {openModal && <Modal setOpenModal={setOpenModal} />} */}
+    </StResult>
+  );
 };
 
 const StResult = styled.div<{ isModalOpen: boolean }>`
