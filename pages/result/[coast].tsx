@@ -40,7 +40,7 @@ const result = ({ result }: Result[]) => {
           <ResultList />
         </SwiperSlide>
       </Swiper>
-      {/* {openModal && <Modal setOpenModal={setOpenModal} />} */}
+      {openModal && <Modal setOpenModal={setOpenModal} />}
     </StResult>
   );
 };
@@ -49,7 +49,7 @@ const StResult = styled.div<{ isModalOpen: boolean }>`
   width: 100%;
   min-height: 100vh;
   height: ${({ isModalOpen }) => (isModalOpen ? '100vh' : null)};
-  overflow: ${({ isModalOpen }) => (isModalOpen ? 'hidden' : null)};
+  overflow: ${({ isModalOpen }) => (isModalOpen ? 'hidden' : 'auto')};
   background: ${({ theme }) => theme.color.backgroundColor};
 `;
 

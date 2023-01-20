@@ -4,8 +4,8 @@ import CircleImg from '../../../public/assets/images/image_circle.png';
 import React from 'react';
 import Image from 'next/image';
 import ResultCoast from './ResultCoast';
-import Headline from '../common/Headline';
 import ResultLocation from './ResultLocation';
+import ResultCreature from './ResultCreature';
 
 const ResultList = () => {
   const dateType = 'today';
@@ -18,6 +18,12 @@ const ResultList = () => {
   const location = '제주 서귀포시 법환동';
   const locationImage =
     'https://goormthon-sss-bucket.s3.ap-northeast-2.amazonaws.com/content/a64cfca2-8adc-47c3-b062-23366ae13b59.png';
+
+  const holdingCreature = [
+    { image: '', name: '선침거미불가사리', kind: '보호종' },
+    { image: '', name: '선침거미불가사리', kind: '보호종' },
+    { image: '', name: '선침거미불가사리', kind: '교란종' },
+  ];
 
   return (
     <StResultList>
@@ -34,6 +40,7 @@ const ResultList = () => {
       <StBody>
         <ResultCoast coastalImage={coastalImage} coastalContent={coastalContent} />
         <ResultLocation location={location} locationImage={locationImage} />
+        <ResultCreature holdingCreature={holdingCreature} />
       </StBody>
     </StResultList>
   );
@@ -41,6 +48,7 @@ const ResultList = () => {
 
 const StResultList = styled.div`
   width: 100%;
+  overflow: auto;
 `;
 
 const StHeader = styled.div`
