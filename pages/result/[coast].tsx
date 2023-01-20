@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import ResultAPI from '@src/api/result';
 import Modal from '@src/components/common/Modal';
-import { convertDate } from '@src/utils/convertDate';
 import { useState } from 'react';
 import { dehydrate, QueryClient } from 'react-query';
 
