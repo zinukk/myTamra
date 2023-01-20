@@ -4,6 +4,7 @@ import CircleImg from '../../../public/assets/images/image_circle.png';
 import React from 'react';
 import Image from 'next/image';
 import ResultCoast from './ResultCoast';
+import Headline from '../common/Headline';
 
 const ResultList = () => {
   const dateType = 'today';
@@ -27,6 +28,7 @@ const ResultList = () => {
       </StHeader>
       <StBody>
         <ResultCoast coastalImage={coastalImage} coastalContent={coastalContent} />
+        <Headline text="내가 있는 위치는?" />
       </StBody>
     </StResultList>
   );
