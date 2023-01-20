@@ -4,18 +4,16 @@ import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { selectedState } from '@src/store/selectedState';
 import FirstPage from '@src/components/select/FirstPage';
 import SecondPage from '@src/components/select/SecondPage';
-import usePostSelected from '@src/hooks/mutation/usePostSelected';
-import client, { baseURL } from '@src/api/client';
 import { useMutation } from 'react-query';
 import SelectAPI from '@src/api/select';
 import { AxiosResponse } from 'axios';
 import { useRouter } from 'next/router';
-import { locationState } from '@src/store/locationState';
+import { coastState } from '@src/store/coastState';
 
 const Select = () => {
   const router = useRouter();
 
-  const setLocationState = useSetRecoilState(locationState);
+  const setCoastState = useSetRecoilState(coastState);
 
   const selectedInfo = useRecoilValue<ISelect>(selectedState);
 
@@ -25,7 +23,7 @@ const Select = () => {
 
   const { mutate: postSelectedMutate } = useMutation((data: ISelect) => SelectAPI.postSelected(data), {
     onSuccess: (data: AxiosResponse) => {
-      setLocationState(data as any);
+      setCoastState(data as any);
       router.push('/loading');
     },
   });
