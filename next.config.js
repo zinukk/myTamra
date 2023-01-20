@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: false,
   images: {
-    domains: ['goormthon-sss-bucket.s3.ap-northeast-2.amazonaws.com'],
+    domains: ['goormthon-sss-bucket.s3.ap-northeast-2.amazonaws.com', 'search.pstatic.net'],
   },
   webpack: (config) => {
     config.module.rules.push({
