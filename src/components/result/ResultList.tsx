@@ -3,10 +3,12 @@ import { convertDate } from '@src/utils/convertDate';
 import CircleImg from '../../../public/assets/images/image_circle.png';
 import React from 'react';
 import Image from 'next/image';
-import ResultCoast from './ResultCoast';
-import ResultLocation from './ResultLocation';
-import ResultCreature from './ResultCreature';
-import ResultPlace from './ResultPlace';
+import Coast from './Coast';
+import Location from './Location';
+import Creature from './Creature';
+import Place from './Place';
+import Reason from './Reason';
+import Campaign from './Campaign';
 
 const ResultList = () => {
   const dateType = 'today';
@@ -68,10 +70,16 @@ const ResultList = () => {
         <StDate>{convertDate(dateType)}</StDate>
       </StHeader>
       <StBody>
-        <ResultCoast coastalImage={coastalImage} coastalContent={coastalContent} />
-        <ResultLocation location={location} locationImage={locationImage} />
-        <ResultCreature holdingCreature={holdingCreature} />
-        <ResultPlace dateType={dateType} place={place} />
+        <Coast coastalImage={coastalImage} coastalContent={coastalContent} />
+        <Location location={location} locationImage={locationImage} />
+        <Creature holdingCreature={holdingCreature} />
+        <Place dateType={dateType} place={place} />
+        {dateType !== 'today' && (
+          <>
+            <Reason />
+            <Campaign place={place} />
+          </>
+        )}
       </StBody>
     </StResultList>
   );

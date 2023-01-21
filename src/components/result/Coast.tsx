@@ -7,12 +7,12 @@ interface IProps {
   coastalContent: string;
 }
 
-const ResultCoast = ({ coastalImage, coastalContent }: IProps) => {
+const Coast = ({ coastalImage, coastalContent }: IProps) => {
   const descriptions = coastalContent.split('\n');
   console.log(descriptions);
 
   return (
-    <StResultCoast>
+    <StCoast>
       <StBody>
         <StCoastImage>{/* <Image src={coastalImage} alt="해안 이미지" width={100} height={100} /> */}</StCoastImage>
         <StDescriptionBox>
@@ -21,11 +21,11 @@ const ResultCoast = ({ coastalImage, coastalContent }: IProps) => {
           ))}
         </StDescriptionBox>
       </StBody>
-    </StResultCoast>
+    </StCoast>
   );
 };
 
-const StResultCoast = styled.div`
+const StCoast = styled.div`
   margin-bottom: 40px;
   width: 100%;
 `;
@@ -51,4 +51,4 @@ const StDescription = styled.p`
   word-break: keep-all;
 `;
 
-export default ResultCoast;
+export default Coast;

@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import Image from 'next/image';
 import React from 'react';
 import Headline from '../common/Headline';
-import Creature from '/public/assets/images/image_creature.png';
+import CreatureImg from '/public/assets/images/image_creature.png';
 import Protected from '/public/assets/svgs/svg_protected.svg';
 import Disturbed from '/public/assets/svgs/svg_disturbed.svg';
 
@@ -10,34 +10,35 @@ interface IProps {
   holdingCreature: Creature[];
 }
 
-const ResultCreature = ({ holdingCreature }: IProps) => {
+const Creature = ({ holdingCreature }: IProps) => {
   return (
-    <StResultCreature>
+    <StCreature>
       <StHeader>
         <Headline text="내가 가진 생물은?" />
       </StHeader>
       <StBody>
         {holdingCreature.map(({ image, name, kind }: Creature, idx: number) => (
-          <StCreature key={idx}>
-            <Image src={Creature} alt="생물이미지" width={116} height={116} />
+          <StCreatureInfo key={idx}>
+            <Image src={CreatureImg} alt="생물이미지" width={116} height={116} />
             <StName>{name}</StName>
             <StKindBox>
               {kind === '보호종' ? <Protected alt="보호종" /> : <Disturbed alt="교란종" />}
               <StKind isProtected={kind === '보호종'}>{kind}</StKind>
             </StKindBox>
-          </StCreature>
+          </StCreatureInfo>
         ))}
       </StBody>
-    </StResultCreature>
+    </StCreature>
   );
 };
 
-const StResultCreature = styled.div`
+const StCreature = styled.div`
   padding: 20px;
   width: 100%;
 `;
 
 const StHeader = styled.div`
+  margin-bottom: 20px;
   width: 100%;
 `;
 
@@ -48,7 +49,7 @@ const StBody = styled.div`
   width: 100%;
 `;
 
-const StCreature = styled.div`
+const StCreatureInfo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,4 +77,4 @@ const StKind = styled.p<{ isProtected: boolean }>`
   font-size: 15px;
 `;
 
-export default ResultCreature;
+export default Creature;
