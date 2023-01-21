@@ -9,24 +9,24 @@ interface IProps {
   locationImage: string;
 }
 
-const ResultLocation = ({ location, locationImage }: IProps) => {
+const Location = ({ location, locationImage }: IProps) => {
   return (
-    <StResultLocation>
+    <StLocation>
       <StHeader>
         <Headline text="내가 있는 위치는?" />
-        <StLocation>
+        <StLocationInfo>
           <Image src={LocationIcon} alt="위치아이콘" width={15} height={20} />
           <StLocationText>{location}</StLocationText>
-        </StLocation>
+        </StLocationInfo>
       </StHeader>
       <StBody>
         <Image src={locationImage} alt="해안위치" width={100} height={100} />
       </StBody>
-    </StResultLocation>
+    </StLocation>
   );
 };
 
-const StResultLocation = styled.div`
+const StLocation = styled.div`
   padding: 20px;
   width: 100%;
 `;
@@ -37,7 +37,7 @@ const StHeader = styled.div`
   width: 100%;
 `;
 
-const StLocation = styled.div`
+const StLocationInfo = styled.div`
   display: flex;
   align-items: center;
   margin-top: 15px;
@@ -54,4 +54,4 @@ const StBody = styled.div`
   width: 100%;
 `;
 
-export default ResultLocation;
+export default Location;

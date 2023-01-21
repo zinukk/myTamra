@@ -6,7 +6,6 @@ import TimeIcon from '/public/assets/icons/icon_time.png';
 import LocationIcon from '/public/assets/icons/icon_storeLocation.png';
 
 interface IProps {
-  dateType: string;
   place: {
     image: string;
     url: string;
@@ -16,39 +15,35 @@ interface IProps {
   }[];
 }
 
-const ResultPlace = ({ dateType, place }: IProps) => {
+const Campaign = ({ place }: IProps) => {
   return (
-    <StResultPlace>
+    <StCampaign>
       <StHeader>
-        <Headline text="주변에 이런 곳은 어때요?" />
+        <Headline text="더 알아볼까요?" />
       </StHeader>
       <StBody>
-        {dateType === 'today' ? (
-          place.map(({ image, url, name, time, location }, idx: number) => (
-            <StPlace key={idx}>
-              <Image src={image} alt="관광이미지" width={120} height={94} style={{ borderRadius: '10px' }} />
-              <StPlaceInfo>
-                <StPlaceName>{name}</StPlaceName>
-                <StLocation>
-                  <Image src={LocationIcon} alt="위치아이콘" width={12} height={16} />
-                  <StLocationText>{location}</StLocationText>
-                </StLocation>
-                <StTime>
-                  <Image src={TimeIcon} alt="시간아이콘" width={13} height={13} />
-                  <StTimeText>{time}</StTimeText>
-                </StTime>
-              </StPlaceInfo>
-            </StPlace>
-          ))
-        ) : (
-          <StGray>서비스 지역이 아닙니다.</StGray>
-        )}
+        {place.map(({ image, url, name, time, location }, idx: number) => (
+          <StPlace key={idx}>
+            <Image src={image} alt="관광이미지" width={120} height={94} style={{ borderRadius: '10px' }} />
+            <StPlaceInfo>
+              <StPlaceName>{name}</StPlaceName>
+              <StLocation>
+                <Image src={LocationIcon} alt="위치아이콘" width={12} height={16} />
+                <StLocationText>{location}</StLocationText>
+              </StLocation>
+              <StTime>
+                <Image src={TimeIcon} alt="시간아이콘" width={13} height={13} />
+                <StTimeText>{time}</StTimeText>
+              </StTime>
+            </StPlaceInfo>
+          </StPlace>
+        ))}
       </StBody>
-    </StResultPlace>
+    </StCampaign>
   );
 };
 
-const StResultPlace = styled.div`
+const StCampaign = styled.div`
   padding: 20px;
   width: 100%;
 `;
@@ -115,4 +110,4 @@ const StGray = styled.p`
   font-size: 15px;
 `;
 
-export default ResultPlace;
+export default Campaign;
