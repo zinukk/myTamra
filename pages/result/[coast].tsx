@@ -8,6 +8,7 @@ import 'swiper/swiper.min.css';
 import 'swiper/components/navigation/navigation.min.css';
 import SwiperCore, { Navigation } from 'swiper';
 import ResultList from '@src/components/result/ResultList';
+import SEO from '@src/components/common/SEO';
 
 export async function getServerSideProps(context: any) {
   const coast = context.params.coast;
@@ -35,17 +36,20 @@ const result = ({ result }: IProps) => {
   SwiperCore.use([Navigation]);
 
   return (
-    <StResult isModalOpen={openModal}>
-      <Swiper>
-        <SwiperSlide>
-          <ResultList result={present} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ResultList result={future} />
-        </SwiperSlide>
-      </Swiper>
-      {openModal && <Modal setOpenModal={setOpenModal} />}
-    </StResult>
+    <>
+      <SEO title="결과 페이지" />
+      <StResult isModalOpen={openModal}>
+        <Swiper>
+          <SwiperSlide>
+            <ResultList result={present} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ResultList result={future} />
+          </SwiperSlide>
+        </Swiper>
+        {openModal && <Modal setOpenModal={setOpenModal} />}
+      </StResult>
+    </>
   );
 };
 

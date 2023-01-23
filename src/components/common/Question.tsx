@@ -60,8 +60,8 @@ const StBody = styled.div`
 const StButton = styled.button<{ isSelected: boolean }>`
   background: ${({ theme, isSelected }) => (isSelected ? theme.color.mainColor : theme.color.backgroundColor)};
   border-radius: 11px;
-  border: ${({ theme, isSelected }) => (isSelected ? 'none' : `1px solid ${theme.color.mainColor}`)};
-  color: ${({ theme, isSelected }) => (isSelected ? theme.color.backgroundColor : theme.color.mainColor)};
+  border: ${({ theme, isSelected }) => (isSelected ? 'none' : `1px solid ${theme.color.subColor}`)};
+  color: ${({ theme, isSelected }) => (isSelected ? theme.color.backgroundColor : theme.color.subColor)};
   cursor: pointer;
 `;
 

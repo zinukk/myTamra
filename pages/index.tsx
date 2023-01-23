@@ -4,20 +4,24 @@ import Snowfall from 'react-snowfall';
 import MainBg from '../public/assets/images/image_bg.gif';
 import MainLogo from '../public/assets/images/image_logo.png';
 import MainText from '../public/assets/images/image_startText.png';
+import SEO from '@src/components/common/SEO';
 
 const Home = () => {
   const router = useRouter();
 
   return (
-    <StHome
-      MainBg={MainBg}
-      onClick={() => {
-        router.push('/select');
-      }}>
-      <StHeader MainLogo={MainLogo} />
-      <Snowfall snowflakeCount={60} />
-      <StFooter MainText={MainText} />
-    </StHome>
+    <>
+      <SEO title="나의 탐라" />
+      <StHome
+        MainBg={MainBg}
+        onClick={() => {
+          router.push('/select');
+        }}>
+        <StHeader MainLogo={MainLogo} />
+        <Snowfall snowflakeCount={60} />
+        <StFooter MainText={MainText} />
+      </StHome>
+    </>
   );
 };
 
