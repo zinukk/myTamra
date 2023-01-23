@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 const Clipboard = () => {
   const [copyUrl, setCopyUrl] = useState<boolean>(false);
 
-  const SERVICE_URL = 'http://localhost:3000/';
+  const SERVICE_URL = 'https://mytamla.netlify.app';
 
   const handleCopyClipBoard = () => {
     setCopyUrl(true);
@@ -29,7 +29,7 @@ const StClipboard = styled.div`
   width: 100%;
   background: ${({ theme }) => theme.color.gray400};
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 15px;
 `;
 
 const StUrl = styled.div`
@@ -47,8 +47,8 @@ const StCopyBtn = styled.button<{ isCopied: boolean }>`
   color: ${({ theme, isCopied }) => (isCopied ? theme.color.backgroundColor : theme.color.whiteColor)};
   background: ${({ theme, isCopied }) => (isCopied ? theme.color.mainColor : theme.color.gray500)};
   border: none;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   font-size: 16px;
 `;
 

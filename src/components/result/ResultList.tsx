@@ -11,6 +11,7 @@ import Reason from './Reason';
 import Campaign from './Campaign';
 import Fit from './Fit';
 import Clipboard from './Clipboard';
+import KakaoShare from './KakaoShare';
 
 interface IProps {
   result: Result;
@@ -59,6 +60,7 @@ const ResultList = ({ result }: IProps) => {
       </StBody>
       <StFooter>
         <Clipboard />
+        <KakaoShare />
       </StFooter>
     </StResultList>
   );
