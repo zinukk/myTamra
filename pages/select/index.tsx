@@ -9,6 +9,7 @@ import SelectAPI from '@src/api/select';
 import { AxiosResponse } from 'axios';
 import { useRouter } from 'next/router';
 import { coastState } from '@src/store/coastState';
+import SEO from '@src/components/common/SEO';
 
 const Select = () => {
   const router = useRouter();
@@ -39,10 +40,13 @@ const Select = () => {
   ];
 
   return (
-    <StSelect>
-      <StHeader>가장 나다운 말을 선택해주세요</StHeader>
-      <StBody>{pages[pageIdx]}</StBody>
-    </StSelect>
+    <>
+      <SEO title="질문 선택" />
+      <StSelect>
+        <StHeader>가장 나다운 말을 선택해주세요</StHeader>
+        <StBody>{pages[pageIdx]}</StBody>
+      </StSelect>
+    </>
   );
 };
 
