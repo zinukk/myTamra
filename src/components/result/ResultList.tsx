@@ -10,6 +10,7 @@ import Place from './Place';
 import Reason from './Reason';
 import Campaign from './Campaign';
 import Fit from './Fit';
+import Clipboard from './Clipboard';
 
 interface IProps {
   result: Result;
@@ -56,6 +57,9 @@ const ResultList = ({ result }: IProps) => {
         )}
         <Fit enemy={enemy} enemyName={enemyName} friend={friend} friendName={friendName} />
       </StBody>
+      <StFooter>
+        <Clipboard />
+      </StFooter>
     </StResultList>
   );
 };
@@ -108,6 +112,16 @@ const StBody = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
+`;
+
+const StFooter = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 20px;
   width: 100%;
 `;
 

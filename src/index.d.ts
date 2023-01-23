@@ -6,6 +6,7 @@ interface Color {
   backgroundColor: string;
   whiteColor: string;
   blackColor: string;
+  gray400: string;
   gray500: string;
   gray600: string;
   gray700: string;

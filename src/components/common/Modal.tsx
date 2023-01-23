@@ -39,7 +39,7 @@ const StBody = styled.div`
   justify-content: center;
   padding: 50px 0;
   width: 80vw;
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 14px;
 `;
 

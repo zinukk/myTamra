@@ -20,7 +20,7 @@ const Fit = ({ enemy, enemyName, friend, friendName }: IProps) => {
       <StBody>
         {CONTENTS.map(({ id, image, name, type }) => (
           <StFitBox key={id}>
-            <Image src={image} alt="해안 사진" width={167} height={115} style={{ borderRadius: '10px' }} />
+            <Image src={image} alt="해안 사진" width={160} height={115} style={{ borderRadius: '10px' }} />
             <StType>{type}</StType>
             <StName>{name}</StName>
           </StFitBox>
@@ -31,13 +31,13 @@ const Fit = ({ enemy, enemyName, friend, friendName }: IProps) => {
 };
 
 const StFit = styled.div`
-  margin-top: 40px;
+  margin-top: 20px;
   width: 100%;
 `;
 
 const StBody = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 `;
