@@ -16,10 +16,10 @@ const Creature = ({ holdingCreature }: IProps) => {
       <StHeader>
         <Headline text="내가 가진 생물은?" />
       </StHeader>
-      <StBody>
+      <StBody isOne={holdingCreature.length < 3}>
         {holdingCreature.map(({ image, name, kind }: Creature, idx: number) => (
           <StCreatureInfo key={idx}>
-            <Image src={CreatureImg} alt="생물이미지" width={116} height={116} />
+            <Image src={image} alt="생물이미지" width={116} height={116} />
             <StName>{name}</StName>
             <StKindBox>
               {kind === '보호종' ? <Protected alt="보호종" /> : <Disturbed alt="교란종" />}
@@ -42,9 +42,10 @@ const StHeader = styled.div`
   width: 100%;
 `;
 
-const StBody = styled.div`
+const StBody = styled.div<{ isOne: boolean }>`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  /* justify-content: ${({ isOne }) => (isOne ? 'flex-start' : 'space-between')}; */
   align-items: center;
   width: 100%;
 `;
@@ -54,7 +55,7 @@ const StCreatureInfo = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  width: 33%;
 `;
 
 const StName = styled.p`
