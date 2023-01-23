@@ -12,18 +12,20 @@ import ResultList from '@src/components/result/ResultList';
 export async function getServerSideProps(context: any) {
   const coast = context.params.coast;
 
-  const queryClient = new QueryClient();
-
-  await queryClient.prefetchQuery('resultState', async () => await ResultAPI.getResult(coast));
+  const response = await ResultAPI.getResult(coast);
 
   return {
     props: {
-      result: dehydrate(queryClient).queries[0].state.data,
+      result: response,
     },
   };
 }
 
-const result = ({ result }: Result[]) => {
+interface IProps {
+  result: Result[];
+}
+
+const result = ({ result }: IProps) => {
   const [openModal, setOpenModal] = useState<boolean>(true);
 
   const [present, future] = result;

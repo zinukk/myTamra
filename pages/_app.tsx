@@ -7,6 +7,12 @@ import global from 'styles/global';
 import theme from 'styles/theme';
 import Layout from '@src/components/common/Layout/Layout';
 
+declare global {
+  interface Window {
+    Kakao: any;
+  }
+}
+
 const App = ({ Component, pageProps }: AppProps) => {
   const [queryClient] = useState(() => new QueryClient());
 
