@@ -9,24 +9,26 @@ import 'swiper/components/navigation/navigation.min.css';
 import SwiperCore, { Navigation } from 'swiper';
 import ResultList from '@src/components/result/ResultList';
 
-// export async function getServerSideProps(context: any) {
-//   const coast = context.params.coast;
+export async function getServerSideProps(context: any) {
+  const coast = context.params.coast;
 
-//   const queryClient = new QueryClient();
+  const queryClient = new QueryClient();
 
-//   await queryClient.prefetchQuery('resultState', async () => await ResultAPI.getResult(coast));
+  await queryClient.prefetchQuery('resultState', async () => await ResultAPI.getResult(coast));
 
-//   return {
-//     props: {
-//       result: dehydrate(queryClient).queries[0].state.data,
-//     },
-//   };
-// }
+  return {
+    props: {
+      result: dehydrate(queryClient).queries[0].state.data,
+    },
+  };
+}
 
 const result = ({ result }: Result[]) => {
   const [openModal, setOpenModal] = useState<boolean>(true);
 
-  // const [present, future] = result;
+  const [present, future] = result;
+
+  console.log(present);
 
   SwiperCore.use([Navigation]);
 
@@ -34,10 +36,10 @@ const result = ({ result }: Result[]) => {
     <StResult isModalOpen={openModal}>
       <Swiper>
         <SwiperSlide>
-          <ResultList />
+          <ResultList result={present} />
         </SwiperSlide>
         <SwiperSlide>
-          <ResultList />
+          <ResultList result={future} />
         </SwiperSlide>
       </Swiper>
       {openModal && <Modal setOpenModal={setOpenModal} />}

@@ -20,7 +20,7 @@ const Location = ({ location, locationImage }: IProps) => {
         </StLocationInfo>
       </StHeader>
       <StBody>
-        <Image src={locationImage} alt="해안위치" width={100} height={100} />
+        <Image src={locationImage} alt="해안위치" fill />
       </StBody>
     </StLocation>
   );
@@ -51,7 +51,10 @@ const StLocationText = styled.p`
 `;
 
 const StBody = styled.div`
-  width: 100%;
+  position: relative;
+  margin: 40px auto;
+  width: 270px;
+  height: 140px;
 `;
 
 export default Location;

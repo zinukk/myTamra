@@ -14,7 +14,7 @@ const loading = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      router.push(`/result/${coast}`);
+      router.push(`/result/${coast}`, undefined, { shallow: true });
     }, 2000);
   }, []);
 

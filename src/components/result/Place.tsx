@@ -4,6 +4,7 @@ import React from 'react';
 import Headline from '../common/Headline';
 import TimeIcon from '/public/assets/icons/icon_time.png';
 import LocationIcon from '/public/assets/icons/icon_storeLocation.png';
+import { useRouter } from 'next/router';
 
 interface IProps {
   dateType: string;
@@ -17,6 +18,12 @@ interface IProps {
 }
 
 const Place = ({ dateType, place }: IProps) => {
+  const router = useRouter();
+
+  const pageHandler = (url: string) => {
+    router.push(url);
+  };
+
   return (
     <StPlace>
       <StHeader>
@@ -25,7 +32,11 @@ const Place = ({ dateType, place }: IProps) => {
       <StBody>
         {dateType === 'today' ? (
           place.map(({ image, url, name, time, location }, idx: number) => (
-            <StPlaceBox key={idx}>
+            <StPlaceBox
+              key={idx}
+              onClick={() => {
+                pageHandler(url);
+              }}>
               <Image src={image} alt="관광이미지" width={120} height={94} style={{ borderRadius: '10px' }} />
               <StPlaceInfo>
                 <StPlaceName>{name}</StPlaceName>
@@ -49,6 +60,7 @@ const Place = ({ dateType, place }: IProps) => {
 };
 
 const StPlace = styled.div`
+  margin-top: 20px;
   padding: 20px;
   width: 100%;
 `;
