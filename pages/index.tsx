@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router';
 import styled from '@emotion/styled';
 import Snowfall from 'react-snowfall';
-import MainBg from '../public/assets/images/image_bg.gif';
-// import MainLogo from '../public/assets/images/image_logo.png';
-import MainText from '../public/assets/images/image_startText.png';
+import MainBg from '/public/assets/images/image_bg.gif';
+import MainLogo from '/public/assets/images/image_mainLogo.png';
+import MainText from '/public/assets/images/image_startText.png';
 import SEO from '@src/components/common/SEO';
 import Image from 'next/image';
 
@@ -18,7 +18,9 @@ const Home = () => {
         onClick={() => {
           router.push('/select');
         }}>
-        <StHeader>{/* <Image src={MainLogo} width={300} height={150} alt="로고" /> */}</StHeader>
+        <StHeader>
+          <Image src={MainLogo} width={300} height={150} alt="로고" />
+        </StHeader>
         <Snowfall snowflakeCount={60} />
         <StFooter MainText={MainText} />
       </StHome>
