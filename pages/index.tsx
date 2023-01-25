@@ -5,6 +5,7 @@ import MainBg from '../public/assets/images/image_bg.gif';
 import MainLogo from '../public/assets/images/image_logo.png';
 import MainText from '../public/assets/images/image_startText.png';
 import SEO from '@src/components/common/SEO';
+import Image from 'next/image';
 
 const Home = () => {
   const router = useRouter();
@@ -17,7 +18,9 @@ const Home = () => {
         onClick={() => {
           router.push('/select');
         }}>
-        <StHeader MainLogo={MainLogo} />
+        <StHeader>
+          <Image src={MainLogo} width={300} height={150} alt="로고" />
+        </StHeader>
         <Snowfall snowflakeCount={60} />
         <StFooter MainText={MainText} />
       </StHome>
@@ -35,16 +38,11 @@ const StHome = styled.div<{ MainBg: any }>`
   cursor: pointer;
 `;
 
-const StHeader = styled.div<{ MainLogo: any }>`
+const StHeader = styled.div`
   position: absolute;
   top: 23%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
-  height: 130px;
-  background-image: url(${(props) => props.MainLogo.src});
-  background-size: cover;
-  background-repeat: no-repeat;
 `;
 
 const StFooter = styled.div<{ MainText: any }>`
