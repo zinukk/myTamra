@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import styled from '@emotion/styled';
 import Snowfall from 'react-snowfall';
 import MainBg from '../public/assets/images/image_bg.gif';
-// import MainLogo from '../public/assets/images/image_logo.png';
+import MainLogo from '../public/assets/images/image_logo.png';
 import MainText from '../public/assets/images/image_startText.png';
 import SEO from '@src/components/common/SEO';
 
@@ -17,7 +17,7 @@ const Home = () => {
         onClick={() => {
           router.push('/select');
         }}>
-        {/* <StHeader MainLogo={MainLogo} /> */}
+        <StHeader MainLogo={MainLogo} />
         <Snowfall snowflakeCount={60} />
         <StFooter MainText={MainText} />
       </StHome>
