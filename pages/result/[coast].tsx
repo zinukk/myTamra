@@ -31,8 +31,6 @@ const result = ({ result }: IProps) => {
 
   const [present, future] = result;
 
-  console.log(present);
-
   SwiperCore.use([Navigation]);
 
   return (

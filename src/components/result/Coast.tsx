@@ -9,7 +9,6 @@ interface IProps {
 
 const Coast = ({ coastalImage, coastalContent }: IProps) => {
   const descriptions = coastalContent.split('\n');
-  console.log(descriptions);
 
   return (
     <StCoast>

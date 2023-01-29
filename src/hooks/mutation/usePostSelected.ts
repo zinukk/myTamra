@@ -9,7 +9,6 @@ const usePostSelected = () => {
   return useMutation((data: ISelect) => SelectAPI.postSelected(data), {
     onSuccess: (data: AxiosResponse) => {
       router.push('/');
-      console.log(data);
     },
   });
 };
