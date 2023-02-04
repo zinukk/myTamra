@@ -16,20 +16,20 @@ jobs:
       - name: Build 
         run: yarn build
       - name: zip create 
-        run: zip -qq -r ./build.zip . 
+        run: zip -qq -r ./test-build.zip . 
         shell: bash
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }} 
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-2
+          aws-region: ${{ secrets.AWS_REGION }} 
       - name: Upload to S3 
-        run: | 
-        aws s3 cp --region us-east-1 ./build.zip s3://tamra-bucket/build.zip
+        run: | # S3 버킷 이름.
+          aws s3 cp --region us-east-1 ./test-build.zip s3://tamra-bucket/test-build.zip
       - name: Deploy 
         run: aws deploy create-deployment
           --application-name tamra-codeDeploy # AWS의 Code Deploy 애플리케이션 이름.
           --deployment-config-name CodeDeployDefault.AllAtOnce # Code Deploy에서 설정했던 Deploy 방식.
           --deployment-group-name tamra-deploy-group # AWS의 Code Deploy 애플리케이션의 배포 그룹 이름.
-          --s3-location bucket=tamra-bucket/build.zip # Code Deploy가 S3에서 프로젝트를 찾을 수 있도록 경로 지정. (bucket=버킷 이름/test-build.zip)
+          --s3-location bucket=tamra-bucket,bundleType=zip # Code Deploy가 S3에서 프로젝트를 찾을 수 있도록 경로 지정. (bucket=버킷 이름/test-build.zip)
