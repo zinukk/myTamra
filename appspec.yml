@@ -2,10 +2,10 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu/myTamra
+    destination: /home/ubuntu/deploy
     overwrite: yes
 permissions:
-  - object: /home/ubuntu/myTamra
+  - object: /home/ubuntu/deploy
     owner: root
     group: root
     mode: 755

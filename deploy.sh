@@ -1,5 +1,5 @@
 #!/bin/bash
-REPOSITORY=/home/ubuntu/myTamra
+REPOSITORY=/home/ubuntu/deploy
 
 cd $REPOSITORY 
 
