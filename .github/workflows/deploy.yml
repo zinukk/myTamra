@@ -32,4 +32,4 @@ jobs:
           --application-name tamra-codeDeploy
           --deployment-config-name CodeDeployDefault.AllAtOnce
           --deployment-group-name tamra-deploy-group
-          --s3-location bucket=tamra-bucket,bundleType=zip,key=tamra-bucket/test-build.zip
+          --s3-location bucket=tamra-bucket,bundleType=zip,key=test-build.zip
