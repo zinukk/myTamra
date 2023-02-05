@@ -1,8 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import styled from '@emotion/styled';
 import ResultAPI from '@src/api/result';
 import Modal from '@src/components/common/Modal';
 import { useState } from 'react';
-import { dehydrate, QueryClient } from 'react-query';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.min.css';
 import 'swiper/components/navigation/navigation.min.css';
@@ -26,7 +26,7 @@ interface IProps {
   result: Result[];
 }
 
-const result = ({ result }: IProps) => {
+const Result = ({ result }: IProps) => {
   const [openModal, setOpenModal] = useState<boolean>(true);
 
   const [present, future] = result;
@@ -59,4 +59,4 @@ const StResult = styled.div<{ isModalOpen: boolean }>`
   background: ${({ theme }) => theme.color.backgroundColor};
 `;
 
-export default result;
+export default Result;

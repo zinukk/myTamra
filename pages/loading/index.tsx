@@ -16,7 +16,7 @@ const loading = () => {
     setTimeout(() => {
       router.push(`/result/${coast}`, undefined, { shallow: true });
     }, 2000);
-  }, []);
+  });
 
   return (
     <StLoading>

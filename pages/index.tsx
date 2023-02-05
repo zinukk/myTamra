@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useRouter } from 'next/router';
 import styled from '@emotion/styled';
 import Snowfall from 'react-snowfall';

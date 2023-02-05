@@ -1,5 +1,6 @@
-import { useState } from 'react';
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { AppProps } from 'next/app';
+import { useState } from 'react';
 import { Global, ThemeProvider } from '@emotion/react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { RecoilRoot } from 'recoil';
