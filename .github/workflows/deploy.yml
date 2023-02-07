@@ -5,7 +5,7 @@ on:
       - main
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout source code.
         uses: actions/checkout@v2
@@ -16,7 +16,7 @@ jobs:
       - name: Build
         run: yarn build
       - name: zip create
-        run: zip -qq -r ./test-build.zip .
+        run: zip -qq -r ./build.zip .
         shell: bash
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -26,10 +26,10 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
       - name: Upload to S3
         run: |
-          aws s3 cp --region us-east-1 ./test-build.zip s3://tamra-bucket/test-build.zip
+          aws s3 cp --region us-east-1 ./test-build.zip s3://tamra-bucket/build.zip
       - name: Deploy
         run: aws deploy create-deployment
           --application-name tamra-codeDeploy
           --deployment-config-name CodeDeployDefault.AllAtOnce
           --deployment-group-name tamra-deploy-group
-          --s3-location bucket=tamra-bucket,bundleType=zip,key=test-build.zip
+          --s3-location bucket=tamra-bucket,bundleType=zip,key=build.zip
