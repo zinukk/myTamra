@@ -3,4 +3,6 @@ REPOSITORY=/home/ubuntu/deploy
 
 cd $REPOSITORY 
 
-pm2 restart 0
+sudo yarn install
+
+sudo npx pm2 reload all
