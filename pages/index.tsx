@@ -22,8 +22,8 @@ const Home = () => {
         <StHeader>
           <Image src={MainLogo} width={300} height={150} alt="로고" />
         </StHeader>
-        <Snowfall snowflakeCount={60} />
-        <StFooter MainText={MainText} />
+        {/* <Snowfall snowflakeCount={60} /> */}
+        {/* <StFooter MainText={MainText} /> */}
       </StHome>
     </>
   );
