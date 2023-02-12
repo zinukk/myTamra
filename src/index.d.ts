@@ -15,6 +15,12 @@ interface Color {
   gray950: string;
 }
 
+interface IImage {
+  width: number;
+  height: number;
+  src: string;
+}
+
 interface IOption {
   id: number;
   text: string;
