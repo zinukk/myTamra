@@ -1,35 +1,24 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { useRouter } from 'next/router';
 import styled from '@emotion/styled';
+import Image from 'next/image';
 import Snowfall from 'react-snowfall';
 import MainBg from '/public/assets/images/image_bg.gif';
 import MainLogo from '/public/assets/images/image_mainLogo.png';
 import MainText from '/public/assets/images/image_startText.png';
-import SEO from '@src/components/common/SEO';
-import Image from 'next/image';
+import { IHomeProps } from './types';
 
-const Home = () => {
-  const router = useRouter();
-
+const HomeView = ({ pageHandler }: IHomeProps) => {
   return (
-    <>
-      <SEO title="나의 탐라" />
-      <StHome
-        MainBg={MainBg}
-        onClick={() => {
-          router.push('/select');
-        }}>
-        <StHeader>
-          <Image src={MainLogo} width={300} height={150} alt="로고" />
-        </StHeader>
-        <Snowfall snowflakeCount={60} />
-        <StFooter MainText={MainText} />
-      </StHome>
-    </>
+    <StHome MainBg={MainBg} onClick={pageHandler}>
+      <StHeader>
+        <Image src={MainLogo} width={300} height={150} alt="로고" />
+      </StHeader>
+      <Snowfall snowflakeCount={60} />
+      <StFooter MainText={MainText} />
+    </StHome>
   );
 };
 
-const StHome = styled.div<{ MainBg: any }>`
+const StHome = styled.div<{ MainBg: IImage }>`
   position: relative;
   width: 100%;
   height: 100%;
@@ -46,7 +35,7 @@ const StHeader = styled.div`
   transform: translate(-50%, -50%);
 `;
 
-const StFooter = styled.div<{ MainText: any }>`
+const StFooter = styled.div<{ MainText: IImage }>`
   position: absolute;
   bottom: 5%;
   left: 50%;
@@ -58,4 +47,4 @@ const StFooter = styled.div<{ MainText: any }>`
   background-repeat: no-repeat;
 `;
 
-export default Home;
+export default HomeView;
