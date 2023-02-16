@@ -1,18 +1,12 @@
 import styled from '@emotion/styled';
 import Image from 'next/image';
-import React from 'react';
 import Headline from '../common/Headline';
 import TimeIcon from '/public/assets/icons/icon_time.png';
 import LocationIcon from '/public/assets/icons/icon_storeLocation.png';
+import { IPlace } from '@src/types/result';
 
 interface IProps {
-  place: {
-    image: string;
-    url: string;
-    name: string;
-    time: string;
-    location: string;
-  }[];
+  place: IPlace[];
 }
 
 const Campaign = ({ place }: IProps) => {
@@ -22,7 +16,7 @@ const Campaign = ({ place }: IProps) => {
         <Headline text="더 알아볼까요?" />
       </StHeader>
       <StBody>
-        {place.map(({ image, url, name, time, location }, idx: number) => (
+        {place.map(({ image, name, time, location }, idx: number) => (
           <StPlace key={idx}>
             <Image src={image} alt="관광이미지" width={120} height={94} style={{ borderRadius: '10px' }} />
             <StPlaceInfo>

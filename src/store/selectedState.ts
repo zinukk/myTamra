@@ -1,6 +1,7 @@
+import { ISelectedInfo } from '@src/types/select';
 import { atom } from 'recoil';
 
-export const selectedState = atom<ISelect>({
+export const selectedState = atom<ISelectedInfo>({
   key: 'selectedState',
   default: {
     first: 0,

@@ -1,6 +1,4 @@
-import { ComponentType, Dispatch, SetStateAction } from 'react';
-
-export type ComponentArray = Array<ComponentType>;
+import { Dispatch, SetStateAction } from 'react';
 
 export interface ISelectProps {
   pageIdx: number;
