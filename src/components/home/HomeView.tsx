@@ -4,7 +4,7 @@ import Snowfall from 'react-snowfall';
 import MainBg from '/public/assets/images/image_bg.gif';
 import MainLogo from '/public/assets/images/image_mainLogo.png';
 import MainText from '/public/assets/images/image_startText.png';
-import { IHomeProps } from './types';
+import { IHomeProps } from '../../types/home';
 
 const HomeView = ({ pageHandler }: IHomeProps) => {
   return (

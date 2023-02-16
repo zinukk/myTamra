@@ -26,20 +26,13 @@ interface IOption {
   text: string;
 }
 
-interface ISelect {
-  [index: string]: number;
-  first: number;
-  second: number;
-  third: number;
-  fourth: number;
-  fifth: number;
-  sixth: number;
-  seventh: number;
-}
-
 interface Button {
   key: number;
   option: string;
+}
+
+interface IError {
+  message: string;
 }
 
 interface Question {
