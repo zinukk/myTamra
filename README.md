@@ -2,7 +2,7 @@
 
 # **구름톤 4기 최우수상**
 
-<img src="https://user-images.githubusercontent.com/103626175/209896642-0076c096-f6d9-4ee3-8013-13dddb3ae36b.png" width="150px"><br>
+<img src="https://velog.velcdn.com/images/zinukk/post/cfc33f92-e92a-454c-9f8e-52e9e93cfecf/image.png" ><br>
 
     질문들을 통해 나의 제주를 추천받고 환경문제로인한 현재와 제주의 미래대비를 통한 경각심을 알려주는 서비스
 
