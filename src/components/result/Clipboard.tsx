@@ -7,11 +7,11 @@ const Clipboard = () => {
 
   const ClipboardProps: IClipboardProps = {
     copyUrl,
-    serviceUrl: 'https://mytamla.netlify.app',
+    serviceUrl: 'https://zinukk.shop',
     handleCopyClipBoard: () => {
       setCopyUrl(true);
 
-      return navigator.clipboard.writeText('https://mytamla.netlify.app');
+      return navigator.clipboard.writeText('https://zinukk.shop');
     },
   };
 
