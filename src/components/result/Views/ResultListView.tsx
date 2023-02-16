@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
-import { convertDate } from '@src/utils/convertDate';
-import CircleImg from '/public/assets/images/image_circle.png';
 import Image from 'next/image';
+import CircleImg from '/public/assets/images/image_circle.png';
 import Coast from '../Coast';
 import Location from '../Location';
 import Creature from '../Creature';
@@ -12,6 +11,7 @@ import Fit from '../Fit';
 import Clipboard from '../Clipboard';
 import KakaoShare from '../KakaoShare';
 import { Result } from '@src/types/result';
+import { convertDate } from '@src/utils/convertDate';
 
 const ResultListView = ({
   dateType,

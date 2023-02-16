@@ -18,7 +18,6 @@ const PlaceView = ({ dateType, place, pageHandler }: IPlaceProps) => {
               key={idx}
               onClick={() => {
                 pageHandler(url);
-                console.log('asd');
               }}>
               <Image src={image} alt="관광이미지" width={120} height={94} style={{ borderRadius: '10px' }} />
               <StPlaceInfo>

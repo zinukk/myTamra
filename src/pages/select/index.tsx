@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { selectedState } from '@src/store/selectedState';
-import FirstPage from '@src/components/select/FirstPage';
-import SecondPage from '@src/components/select/SecondPage';
 import { useMutation } from 'react-query';
-import SelectAPI from '@src/api/select';
 import { AxiosResponse } from 'axios';
 import { useRouter } from 'next/router';
 import { coastState } from '@src/store/coastState';
-import SEO from '@src/components/common/SEO';
-import SelectView from '@src/components/select/Views/SelectView';
 import { IResponse, ISelectedInfo, ISelectProps } from '@src/types/select';
+import SelectAPI from '@src/api/select';
+import SEO from '@src/components/common/SEO';
+import FirstPage from '@src/components/select/FirstPage';
+import SecondPage from '@src/components/select/SecondPage';
+import SelectView from '@src/components/select/Views/SelectView';
 
 const Select = () => {
   const router = useRouter();
@@ -25,8 +25,7 @@ const Select = () => {
 
   const { mutate: postSelectedMutate } = useMutation((data: ISelectedInfo) => SelectAPI.postSelected(data), {
     onSuccess: (data: AxiosResponse<IResponse>) => {
-      const response: AxiosResponse<IResponse> = data;
-      setCoastState(response as unknown as string);
+      setCoastState(data as unknown as string);
       router.push('/loading');
     },
   });

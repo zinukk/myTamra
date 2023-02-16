@@ -1,5 +1,5 @@
-import { IFirstPageProps } from '@src/types/select';
 import { Dispatch, SetStateAction } from 'react';
+import { IFirstPageProps } from '@src/types/select';
 import FirstPageView from './Views/FirstPageView';
 
 interface IProps {

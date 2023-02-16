@@ -1,5 +1,5 @@
-import { IPlace } from '@src/types/result';
 import { useRouter } from 'next/router';
+import { IPlace } from '@src/types/result';
 import PlaceView from './Views/PlaceView';
 
 interface IProps {

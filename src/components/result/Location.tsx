@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
-import React from 'react';
+import Image from 'next/image';
 import Headline from '../common/Headline';
 import LocationIcon from '../../../public/assets/icons/icons_location.png';
-import Image from 'next/image';
 
 interface IProps {
   location: string;

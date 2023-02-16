@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
-import { IKakaoShareProps } from '@src/types/result';
 import Image from 'next/image';
 import KakaoImg from '/public/assets/images/image_kakaoShare.png';
+import { IKakaoShareProps } from '@src/types/result';
 
 const KakaoShareView = ({ share }: IKakaoShareProps) => {
   return (

@@ -1,5 +1,5 @@
+import { useState } from 'react';
 import { IClipboardProps } from '@src/types/result';
-import React, { useState } from 'react';
 import ClipboardView from './Views/ClipboardView';
 
 const Clipboard = () => {

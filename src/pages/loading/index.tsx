@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import styled from '@emotion/styled';
 import { coastState } from '@src/store/coastState';
 import Image from 'next/image';
@@ -7,7 +6,7 @@ import React, { useEffect } from 'react';
 import { useRecoilValue } from 'recoil';
 import Spinner from '/public/assets/images/image_spinner.gif';
 
-const loading = () => {
+const Loading = () => {
   const coast = useRecoilValue(coastState);
 
   const router = useRouter();
@@ -58,4 +57,4 @@ const StText = styled.p`
   line-height: 30px;
 `;
 
-export default loading;
+export default Loading;

@@ -1,12 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import ResultAPI from '@src/api/result';
 import { useState } from 'react';
+import { IResult, IResultProps } from '@src/types/result';
+import ResultAPI from '@src/api/result';
 import SEO from '@src/components/common/SEO';
 import ResultView from '@src/components/result/Views/ResultView';
-import { IResult, IResultProps } from '@src/types/result';
 
 export async function getServerSideProps(context: any) {
-  console.log(context);
   const coast = context.params.coast;
 
   const response = await ResultAPI.getResult(coast);
