@@ -29,14 +29,20 @@
 - 기간 : 2022.12.15 ~ 2022.12.16
 - 개발 언어 : Typescript
 - 개발 라이브러리 : Next.js
-- 배포 환경 : EC2, S3, CodeDeploy, Loadbalancer, Gihub Actions를 이용해 https 및 CI/CD 적용
+- 배포 환경 : AWS EC2, S3, CodeDeploy, Loadbalancer, Gihub Actions를 이용한 https 및 CI/CD 적용
+- 디자인 패턴 : VAC 패턴
 - 협업 툴 : Git / Notion / Figma
+
+<br>
+
+# 프로젝트 멤버 🍊
+<img src="https://user-images.githubusercontent.com/97172321/219441042-9eaa1b56-ca3e-4a27-9d99-2956e7cf4497.png" />
 
 <br>
 
 # 프로젝트 설명 🍊
 
-<img src="https://user-images.githubusercontent.com/97172321/219434983-a6e9f816-1dcf-4c8a-88c1-36069dd56654.png" >
+<img src="https://user-images.githubusercontent.com/97172321/219434983-a6e9f816-1dcf-4c8a-88c1-36069dd56654.png" />
 
 <pre>
 "나는 제주의 어떤 모습일까?"
@@ -51,6 +57,10 @@
 
 동시에 현재와 미래의 제주 모습을 대비적으로 보여줌으로써 제주 환경에 대한 경각심을 일깨우고 있습니다. 
 </pre>
+
+
+
+
 
 
 
