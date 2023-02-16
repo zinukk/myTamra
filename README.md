@@ -1,9 +1,10 @@
+# 나의 탐라 : 나는 제주의 모습은?
+
+<img src="https://user-images.githubusercontent.com/97172321/219431038-2bb12055-5cb9-4712-849b-aa3a1ed366d0.png" >
+
+# 구름톤 4기 최우수상 작품
 <div align="center">
-
-# **구름톤 4기 최우수상**
-
-<img src="https://velog.velcdn.com/images/zinukk/post/cfc33f92-e92a-454c-9f8e-52e9e93cfecf/image.png" width="80%" ><br>
-
+<img src="https://velog.velcdn.com/images/zinukk/post/cfc33f92-e92a-454c-9f8e-52e9e93cfecf/image.png" ><br>
 </div>
 
 <br>
@@ -12,65 +13,44 @@
 
 ### Kakao x Goorm 에서 주최한 해커톤
 
-구름톤은 마음껏 몰입하고 스스로 성장하는 IT 인재로 거듭나고 싶은 분들을 위해 카카오와 구름이 함께합니다. 
-구름톤(9oormthon)은 카카오 클라우드 플랫폼의 이름인 '9rum'과 구름의 영문명 'goorm', 'Hackathon'의 합성어로 두 구름이 만나 열리는 해커톤이라는 의미를 담고 있습니다.
+<pre>
+구름톤은 마음껏 몰입하고 스스로 성장하는 IT 인재로 거듭나고 싶은 사람들을 위해 카카오와 구름이 주최한 해커톤입니다. 
 
-<br/>
+구름톤(9oormthon)은 카카오 클라우드 플랫폼의 이름인 '9rum'과 구름의 영문명 'goorm', 
 
-## 프로젝트 개요
+'Hackathon'의 합성어로 두 구름이 만나 열리는 해커톤이라는 의미를 담고 있습니다.
+</pre>
 
-현재 제주도의 환경문제에 대한 인식을 높이기위해 만든 서비스입니다.
-유저들은 본인에게 맞는 제주를 추천받고 해당 지역근처의 숙소, 맛집을 추천받을 수 있습니다. 추가적으로 나의 제주 미래와 비교하여 현재 환경문제를 인지 할 수 있습니다.
 
-<br/>
+<br>
 
-## 📍 데이터 기반 질문지 서비스
+# 프로젝트 요약 🍊
 
-사용자의 성향을 기반으로 원하는 답안을 선택할 수 있습니다.
+- 기간 : 2022.12.15 ~ 2022.12.16
+- 개발 언어 : Typescript
+- 개발 라이브러리 : Next.js
+- 배포 환경 : EC2, S3, CodeDeploy, Loadbalancer, Gihub Actions를 이용해 https 및 CI/CD 적용
+- 협업 툴 : Git / Notion / Figma
 
-<p align="center"><img src="https://user-images.githubusercontent.com/103626175/209898173-ca1add7b-007f-4a42-a3a2-b6051a81501e.png" height="450px"> </p>
+<br>
 
-## 📑 나의 제주
+# 프로젝트 설명 🍊
 
-나에게 맞는 제주를 추천받을 수 있습니다.
-추천받은 제주 근처의 맛집, 숙소, 레크리에이션을 추천받을 수 있습니다.
+<img src="https://user-images.githubusercontent.com/97172321/219434983-a6e9f816-1dcf-4c8a-88c1-36069dd56654.png" >
 
-<p align="center">
-<img src="https://user-images.githubusercontent.com/103626175/209898248-ebc7f676-f241-4551-bd83-34c328ac9e70.png" height="450px">  
-<img src="https://user-images.githubusercontent.com/103626175/209898262-17175f35-d781-4c35-ba41-d800be76354b.png" height="450px">  
-</p>
+<pre>
+"나는 제주의 어떤 모습일까?"
 
-## 미래의 제주
+나의 탐라는 현재 제주도의 환경문제에 대한 인식을 높이기 위해 만든 서비스입니다. 
 
-환경문제로 망가진 미래의 제주에 대한 일러스트를 확인가능합니다.
-미래의 제주를 개선하기위해 현재 할 수 있는 다양한 환경활동들을 추천받습니다.
+일반적인 사람들의 경우 환경에 대한 어느 정도의 관심은 있지만 크게 신경 쓰지 않는 경우가 대다수이기 때문에 
 
-<p align="center">
-<img src="https://user-images.githubusercontent.com/103626175/209898322-53e0d28c-a3fd-4656-85b8-a22c7b0bd829.png" height="450px">  
-<img src="https://user-images.githubusercontent.com/103626175/209898384-0c96545d-90f8-4ef3-b6ac-d95b883fc993.png" height="450px">  
-</p>
+최근에 유행하는 MBTI 테스트 형식으로 접근의 허들을 낮추고 제주의 심각한 환경 상태를 서비스에 녹여냈습니다.
 
-# 📎 Link
+나의 탐라에서 유저들은 질문지를 통해 결과 페이지에서 본인과 흡사한 제주 해안을 추천받고 해당 지역 근처의 숙소, 맛집 정보를 받을 수 있으며
 
-### Frontend Domain
+동시에 현재와 미래의 제주 모습을 대비적으로 보여줌으로써 제주 환경에 대한 경각심을 일깨우고 있습니다. 
+</pre>
 
-`https://mytamla.netlify.app/`
 
-### Backend API Docs
 
-`https://sum22.notion.site/api-bb29128cd40f44719d8dfb6aef78f143`
-
-### gjf (시연)
-
-![배경화면](https://user-images.githubusercontent.com/103626175/209897331-b9ed7ff7-ef2c-48c0-9e95-b969ca1820d9.gif)<br>
-![리얼메인](https://user-images.githubusercontent.com/103626175/209897333-b8491109-f0d1-46b1-9dbf-b958832548f7.gif)<br>
-![셀렉트](https://user-images.githubusercontent.com/103626175/209897354-109ac71e-c046-4f4d-a30b-1ec2b72b3049.gif)<br>
-
-# 🏠 Members
-
-### 제 4회 kakao x goorm 9oormthon, 너는내운명
-
-|                                                        기획                                                        |                                                프론트(리더)                                                 |                                                 프론트                                                 |                                                      백                                                      |                                                 디자이너                                                 |
-| :----------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: |
-| <img src="https://avatars.githubusercontent.com/u/102569551?s=100&v=4" alt="soyanggaeng" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/103626175?v=4" alt="endmoseung" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/97172321?v=4" alt="zinukk" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/78305431?v=4" alt="Jeongminyooa" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/121597854?v=4" alt="sumsum2" width="100" height="100"> |
-|                                   [soyanggaeng](https://github.com/soyanggaeng)                                    |                          [endmoseung](https://github.com/endmoseung?tab=following)                          |                                  [zinukk](https://github.com/zinukk)                                   |                               [Jeongminyooa](https://github.com/Jeongminyooa)                                |                                  [sumsum2](https://github.com/sumsum2)                                   |
