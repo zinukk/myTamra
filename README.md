@@ -2,7 +2,7 @@
 
 # **구름톤 4기 최우수상**
 
-<img src="https://velog.velcdn.com/images/zinukk/post/cfc33f92-e92a-454c-9f8e-52e9e93cfecf/image.png" ><br>
+<img src="https://velog.velcdn.com/images/zinukk/post/cfc33f92-e92a-454c-9f8e-52e9e93cfecf/image.png" width="80%" ><br>
 
 </div>
 
