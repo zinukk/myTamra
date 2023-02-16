@@ -42,35 +42,6 @@ interface Question {
   button: Button[];
 }
 
-interface Creature {
-  name: string;
-  kind: string;
-  image: string;
-}
-
-interface Place {
-  image: string;
-  location: string;
-  name: string;
-  time: string;
-  url: string;
-}
-
-interface Result {
-  dateType: string;
-  coastalName: string;
-  coastalImage: string;
-  coastalContent: string;
-  holdingCreature: Creature[];
-  location: string;
-  locationImage: string;
-  place: Place[];
-  friend: string;
-  friendName: string;
-  enemy: string;
-  enemyName: string;
-}
-
 declare module '*.jpg';
 declare module '*.png';
 declare module '*.jpeg';

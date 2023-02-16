@@ -2,12 +2,12 @@ import styled from '@emotion/styled';
 import Image from 'next/image';
 import React from 'react';
 import Headline from '../common/Headline';
-import CreatureImg from '/public/assets/images/image_creature.png';
 import Protected from '/public/assets/svgs/svg_protected.svg';
 import Disturbed from '/public/assets/svgs/svg_disturbed.svg';
+import { ICreature } from '@src/types/result';
 
 interface IProps {
-  holdingCreature: Creature[];
+  holdingCreature: ICreature[];
 }
 
 const Creature = ({ holdingCreature }: IProps) => {
@@ -17,7 +17,7 @@ const Creature = ({ holdingCreature }: IProps) => {
         <Headline text="내가 가진 생물은?" />
       </StHeader>
       <StBody isOne={holdingCreature.length < 3}>
-        {holdingCreature.map(({ image, name, kind }: Creature, idx: number) => (
+        {holdingCreature.map(({ image, name, kind }: ICreature, idx: number) => (
           <StCreatureInfo key={idx}>
             <Image src={image} alt="생물이미지" width={116} height={116} />
             <StName>{name}</StName>

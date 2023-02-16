@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { selectedState } from '@src/store/selectedState';
+import { ISelectedInfo } from '@src/types/select';
 import React from 'react';
 import { useRecoilState } from 'recoil';
 
@@ -10,7 +11,7 @@ interface IProps {
 }
 
 const Question = ({ title, button, state }: IProps) => {
-  const [selectedInfo, setSelectedInfo] = useRecoilState<ISelect>(selectedState);
+  const [selectedInfo, setSelectedInfo] = useRecoilState<ISelectedInfo>(selectedState);
 
   const buttonHandler = (state: string, key: number) => {
     setSelectedInfo({ ...selectedInfo, [state]: key });

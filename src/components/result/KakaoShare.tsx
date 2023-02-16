@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
-import Image from 'next/image';
-import React, { useEffect } from 'react';
-import KakaoImg from '../../../public/assets/images/image_kakaoShare.png';
+import { IKakaoShareProps } from '@src/types/result';
+import { useEffect } from 'react';
+import KakaoShareView from './Views/KakaoShareView';
 
 const KakaoShare = () => {
   useEffect(() => {
@@ -11,25 +11,16 @@ const KakaoShare = () => {
     }
   }, []);
 
-  const share = () => {
-    const { Kakao } = window;
-    Kakao.Link.sendScrap({
-      requestUrl: 'https://mytamla.netlify.app',
-    });
+  const KakaoShareProps: IKakaoShareProps = {
+    share: () => {
+      const { Kakao } = window;
+      return Kakao.Link.sendScrap({
+        requestUrl: 'https://zinukk.shop',
+      });
+    },
   };
 
-  return (
-    <StKakaoShare onClick={share}>
-      <Image src={KakaoImg} alt="카카오 이미지" layout="fill" />
-    </StKakaoShare>
-  );
+  return <KakaoShareView {...KakaoShareProps} />;
 };
-
-const StKakaoShare = styled.div`
-  position: relative;
-  margin-top: 10px;
-  width: 100%;
-  height: 55px;
-`;
 
 export default KakaoShare;
