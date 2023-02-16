@@ -2,9 +2,9 @@ import styled from '@emotion/styled';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.min.css';
 import 'swiper/components/navigation/navigation.min.css';
+import { IResultProps } from '@src/types/result';
 import ResultList from '../ResultList';
 import Modal from '@src/components/common/Modal';
-import { IResultProps } from '@src/types/result';
 
 const ResultView = ({ openModal, setOpenModal, present, future }: IResultProps) => {
   return (

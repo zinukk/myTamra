@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { IClipboardProps } from '@src/types/result';
-import React from 'react';
 
 const ClipboardView = ({ serviceUrl, copyUrl, handleCopyClipBoard }: IClipboardProps) => {
   return (

@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
-import { ICoastProps } from '@src/types/result';
 import Image from 'next/image';
-import React from 'react';
+import { ICoastProps } from '@src/types/result';
 
 const CoastView = ({ coastalImage, descriptions }: ICoastProps) => {
   return (

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { IContent, IFitProps } from '@src/types/result';
 import Image from 'next/image';
+import { IContent, IFitProps } from '@src/types/result';
 
 const FitView = ({ CONTENTS }: IFitProps) => {
   return (

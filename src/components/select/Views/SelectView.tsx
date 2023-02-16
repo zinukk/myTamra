@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { ISelectProps } from '@src/types/select';
-import React from 'react';
 
 const SelectView = ({ pages, pageIdx }: ISelectProps) => {
   return (

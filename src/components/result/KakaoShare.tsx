@@ -1,6 +1,5 @@
-import styled from '@emotion/styled';
-import { IKakaoShareProps } from '@src/types/result';
 import { useEffect } from 'react';
+import { IKakaoShareProps } from '@src/types/result';
 import KakaoShareView from './Views/KakaoShareView';
 
 const KakaoShare = () => {

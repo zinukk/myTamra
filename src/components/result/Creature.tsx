@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import Image from 'next/image';
-import React from 'react';
 import Headline from '../common/Headline';
 import Protected from '/public/assets/svgs/svg_protected.svg';
 import Disturbed from '/public/assets/svgs/svg_disturbed.svg';
@@ -45,7 +44,6 @@ const StHeader = styled.div`
 const StBody = styled.div<{ isOne: boolean }>`
   display: flex;
   justify-content: flex-start;
-  /* justify-content: ${({ isOne }) => (isOne ? 'flex-start' : 'space-between')}; */
   align-items: center;
   width: 100%;
 `;

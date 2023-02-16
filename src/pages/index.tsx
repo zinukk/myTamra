@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
+import { IHomeProps } from '@src/types/home';
 import SEO from '@src/components/common/SEO';
 import HomeView from '@src/components/home/HomeView';
-import { IHomeProps } from '@src/types/home';
 
 const Home = () => {
   const router = useRouter();

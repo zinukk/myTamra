@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
-import React from 'react';
 import Question from '../../common/Question';
-import { FIRST_QUESTION } from '@src/mocks/FIRST_QUESTIONS';
 import NextIcon from '/public/assets/svgs/svgs_active.svg';
+import { FIRST_QUESTION } from '@src/mocks/FIRST_QUESTIONS';
 import { IFirstPageProps } from '@src/types/select';
 
 const FirstPageView = ({ setPageIdx, hasValue }: IFirstPageProps) => {

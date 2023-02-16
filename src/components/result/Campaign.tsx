@@ -98,10 +98,4 @@ const StTimeText = styled(StLocationText)`
   padding-top: 1px;
 `;
 
-const StGray = styled.p`
-  width: 100%;
-  color: ${({ theme }) => theme.color.gray500};
-  font-size: 15px;
-`;
-
 export default Campaign;

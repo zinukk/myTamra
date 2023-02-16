@@ -1,5 +1,4 @@
 import { ICoastProps } from '@src/types/result';
-import React from 'react';
 import CoastView from './Views/CoastView';
 
 interface IProps {
