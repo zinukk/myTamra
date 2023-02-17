@@ -4,4 +4,6 @@ cd $REPOSITORY
 
 sudo yarn install
 
+sudo yarn build
+
 sudo pm2 start yarn --name "myTamra" --interpreter bash -- start
