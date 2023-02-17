@@ -2,10 +2,10 @@ REPOSITORY=/home/ubuntu/deploy
 
 cd $REPOSITORY 
 
-sudo pm2 stop
+sudo pm2 kill
 
-sudo pm2 yarn install
+sudo yarn install
 
-sudo pm2 yarn build
+sudo yarn build
 
-pm2 start yarn --name "myTamra" --interpreter bash -- start
+sudo pm2 start yarn --name "myTamra" --interpreter bash -- start
