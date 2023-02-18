@@ -3,6 +3,7 @@
 <img src="https://user-images.githubusercontent.com/97172321/219431038-2bb12055-5cb9-4712-849b-aa3a1ed366d0.png" >
 
 # 구름톤 4기 최우수상 작품
+
 <div align="center">
 <img src="https://velog.velcdn.com/images/zinukk/post/cfc33f92-e92a-454c-9f8e-52e9e93cfecf/image.png" ><br>
 </div>
@@ -21,7 +22,6 @@
 'Hackathon'의 합성어로 두 구름이 만나 열리는 해커톤이라는 의미를 담고 있습니다.
 </pre>
 
-
 <br>
 
 # 프로젝트 요약 🍊
@@ -36,6 +36,7 @@
 <br>
 
 # 프로젝트 멤버 🍊
+
 <img src="https://user-images.githubusercontent.com/97172321/219441042-9eaa1b56-ca3e-4a27-9d99-2956e7cf4497.png" />
 
 <br>
@@ -66,6 +67,4 @@
 
 <img src="https://user-images.githubusercontent.com/97172321/219464009-07b251b6-462c-45d8-a31d-83902cca6800.png" />
 
-# 프로젝트 페이지 구성 및 기능 🍊
-
-
+# 프로젝트 페이지 구성 🍊
