@@ -44,6 +44,8 @@
 
 <img src="https://user-images.githubusercontent.com/97172321/219434983-a6e9f816-1dcf-4c8a-88c1-36069dd56654.png" />
 
+<img src="https://user-images.githubusercontent.com/97172321/219468634-82903738-c42d-49c0-8476-bbc5e70825f2.png" />
+
 <pre>
 "나는 제주의 어떤 모습일까?"
 
@@ -58,9 +60,12 @@
 동시에 현재와 미래의 제주 모습을 대비적으로 보여줌으로써 제주 환경에 대한 경각심을 일깨우고 있습니다. 
 </pre>
 
+<br>
 
+# 프로젝트 아키텍쳐 🍊
 
+<img src="https://user-images.githubusercontent.com/97172321/219464009-07b251b6-462c-45d8-a31d-83902cca6800.png" />
 
-
+# 프로젝트 페이지 구성 및 기능 🍊
 
 
