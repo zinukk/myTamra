@@ -63,8 +63,9 @@
 
 <br>
 
+
 # 프로젝트 아키텍쳐 🍊
 
-<img src="https://user-images.githubusercontent.com/97172321/219464009-07b251b6-462c-45d8-a31d-83902cca6800.png" />
+<img src="https://user-images.githubusercontent.com/97172321/219953786-a369e73e-6e78-48b8-81fd-7f991cbb4f8d.png" />
 
 # 프로젝트 페이지 구성 🍊
