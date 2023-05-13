@@ -1,5 +1,5 @@
 import { IFit, IFitProps } from '@src/types/result';
-import FitView from './Views/FitView';
+import FitView from './vac/VFit';
 
 const Fit = ({ enemy, enemyName, friend, friendName }: IFit) => {
   const CONTENTS = [

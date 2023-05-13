@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { IKakaoShareProps } from '@src/types/result';
-import KakaoShareView from './Views/KakaoShareView';
+import KakaoShareView from './vac/VKakaoShare';
 
 const KakaoShare = () => {
   useEffect(() => {

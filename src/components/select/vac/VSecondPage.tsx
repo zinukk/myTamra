@@ -1,22 +1,17 @@
 import styled from '@emotion/styled';
 import { ISecondPageProps } from '@src/types/select';
-import { SECOND_QUESTION } from '@src/mocks/SECOND_QUESTIONS';
 import Question from '../../common/Question';
 
-const SecondPageView = ({ hasValue, canSubmit, postSelectedMutate, selectedInfo }: ISecondPageProps) => {
+const VSecondPage = ({ submit, questions, isCompleted }: ISecondPageProps) => {
   return (
     <StSecondPage>
       <StBody>
-        {SECOND_QUESTION.map(({ id, state, title, button }) => (
-          <div key={id}>{hasValue(id - 1) && <Question state={state} title={title} button={button} />}</div>
+        {questions.map(({ id, state, title, button }) => (
+          <div key={id}>{<Question state={state} title={title} button={button} />}</div>
         ))}
       </StBody>
       <StFooter>
-        <StButton
-          onClick={() => {
-            postSelectedMutate(selectedInfo);
-          }}
-          canSubmit={canSubmit}>
+        <StButton onClick={submit} isCompleted={isCompleted}>
           결과 보기
         </StButton>
       </StFooter>
@@ -40,7 +35,7 @@ const StFooter = styled.div`
   width: 100%;
 `;
 
-const StButton = styled.button<{ canSubmit: boolean }>`
+const StButton = styled.button<{ isCompleted: boolean | string }>`
   position: absolute;
   left: 50%;
   bottom: 1%;
@@ -48,11 +43,11 @@ const StButton = styled.button<{ canSubmit: boolean }>`
   width: 271px;
   height: 60px;
   color: ${({ theme }) => theme.color.backgroundColor};
-  background: ${({ theme, canSubmit }) => (canSubmit ? theme.color.mainColor : theme.color.disabledColor)};
+  background: ${({ theme, isCompleted }) => (isCompleted ? theme.color.mainColor : theme.color.disabledColor)};
   border-radius: 8px;
   font-size: 20px;
   font-weight: 600;
   cursor: pointer;
 `;
 
-export default SecondPageView;
+export default VSecondPage;

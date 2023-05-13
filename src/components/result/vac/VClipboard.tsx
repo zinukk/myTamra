@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { IClipboardProps } from '@src/types/result';
 
-const ClipboardView = ({ serviceUrl, copyUrl, handleCopyClipBoard }: IClipboardProps) => {
+const VClipboard = ({ serviceUrl, copyUrl, handleCopyClipBoard }: IClipboardProps) => {
   return (
     <StClipboard>
       <StUrl>{serviceUrl}</StUrl>
@@ -42,4 +42,4 @@ const StCopyBtn = styled.button<{ isCopied: boolean }>`
   font-size: 16px;
 `;
 
-export default ClipboardView;
+export default VClipboard;

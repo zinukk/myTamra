@@ -5,14 +5,14 @@ import TimeIcon from '/public/assets/icons/icon_time.png';
 import LocationIcon from '/public/assets/icons/icon_storeLocation.png';
 import { IPlaceProps } from '@src/types/result';
 
-const PlaceView = ({ dateType, place, pageHandler }: IPlaceProps) => {
+const VPlace = ({ future, place, pageHandler }: IPlaceProps) => {
   return (
     <StPlace>
       <StHeader>
         <Headline text="주변에 이런 곳은 어때요?" />
       </StHeader>
       <StBody>
-        {dateType === 'today' ? (
+        {!future ? (
           place.map(({ image, url, name, time, location }, idx: number) => (
             <StPlaceBox
               key={idx}
@@ -109,4 +109,4 @@ const StGray = styled.p`
   font-size: 15px;
 `;
 
-export default PlaceView;
+export default VPlace;

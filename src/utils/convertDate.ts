@@ -1,4 +1,4 @@
-export const convertDate = (dateType: string) => {
+export const convertDate = (dateType: string | undefined) => {
   const day = new Date();
 
   const year = dateType === 'today' ? day.getFullYear() : 2060;

@@ -1,17 +1,17 @@
 import { useRouter } from 'next/router';
 import { IPlace } from '@src/types/result';
-import PlaceView from './Views/PlaceView';
+import PlaceView from './vac/VPlace';
 
 interface IProps {
-  dateType: string;
+  future: boolean;
   place: IPlace[];
 }
 
-const Place = ({ dateType, place }: IProps) => {
+const Place = ({ future, place }: IProps) => {
   const router = useRouter();
 
   const PlaceProps = {
-    dateType,
+    future,
     place,
     pageHandler: (url: string) => {
       return router.push(url);

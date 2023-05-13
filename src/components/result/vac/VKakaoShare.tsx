@@ -3,7 +3,7 @@ import Image from 'next/image';
 import KakaoImg from '/public/assets/images/image_kakaoShare.png';
 import { IKakaoShareProps } from '@src/types/result';
 
-const KakaoShareView = ({ share }: IKakaoShareProps) => {
+const VKakaoShare = ({ share }: IKakaoShareProps) => {
   return (
     <StKakaoShare onClick={share}>
       <Image src={KakaoImg} alt="카카오 이미지" fill />
@@ -18,4 +18,4 @@ const StKakaoShare = styled.div`
   height: 55px;
 `;
 
-export default KakaoShareView;
+export default VKakaoShare;

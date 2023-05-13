@@ -1,6 +1,9 @@
 import styled from '@emotion/styled';
-import Image from 'next/image';
+import { Result } from '@src/types/result';
+import { convertDate } from '@src/utils/convertDate';
 import CircleImg from '/public/assets/images/image_circle.png';
+import Image from 'next/image';
+import React from 'react';
 import Coast from '../Coast';
 import Location from '../Location';
 import Creature from '../Creature';
@@ -10,11 +13,11 @@ import Campaign from '../Campaign';
 import Fit from '../Fit';
 import Clipboard from '../Clipboard';
 import KakaoShare from '../KakaoShare';
-import { Result } from '@src/types/result';
-import { convertDate } from '@src/utils/convertDate';
 
-const ResultListView = ({
-  dateType,
+const VResultList = ({
+  time,
+  future,
+  date,
   coastalName,
   coastalImage,
   coastalContent,
@@ -32,19 +35,19 @@ const ResultListView = ({
       <StHeader>
         <StImgBox>
           <Image src={CircleImg} alt="원이미지" width={40} height={40} />
-          <StLine dateType={dateType === 'today'} />
+          <StLine dateType={!future} />
         </StImgBox>
         <StCoast>
-          {dateType === 'today' ? '오늘의' : ' 미래의'} {coastalName}
+          {time} {coastalName}
         </StCoast>
-        <StDate>{convertDate(dateType)}</StDate>
+        <StDate>{date}</StDate>
       </StHeader>
       <StBody>
         <Coast coastalImage={coastalImage} coastalContent={coastalContent} />
         <Location location={location} locationImage={locationImage} />
         <Creature holdingCreature={holdingCreature} />
-        <Place dateType={dateType} place={place} />
-        {dateType !== 'today' && (
+        <Place future={future} place={place} />
+        {future && (
           <>
             <Reason />
             <Campaign place={place} />
@@ -121,4 +124,4 @@ const StFooter = styled.div`
   width: 100%;
 `;
 
-export default ResultListView;
+export default VResultList;
