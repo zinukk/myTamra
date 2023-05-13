@@ -1,5 +1,5 @@
 import { ICoastProps } from '@src/types/result';
-import CoastView from './Views/CoastView';
+import CoastView from './vac/VCoast';
 
 interface IProps {
   coastalImage: string;

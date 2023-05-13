@@ -1,23 +1,30 @@
-import { ISecondPageProps, ISelectedInfo } from '@src/types/select';
-import SecondPageView from './Views/SecondPageView';
+import { ISecondPageProps } from '@src/types/select';
+import VSecondPage from './vac/VSecondPage';
+import { QUESTIONS } from '@src/mocks/QUESTIONS';
+import { useRecoilValue } from 'recoil';
+import { questionIdxState } from '@src/store/questionIdxState';
 
 interface IProps {
-  selectedInfo: ISelectedInfo;
   selectedValues: number[];
-  postSelectedMutate: (selectedInfo: ISelectedInfo) => void;
+  postSelectedMutate: () => void;
 }
 
-const SecondPage = ({ selectedValues, postSelectedMutate, selectedInfo }: IProps) => {
-  const PageProps: ISecondPageProps = {
-    hasValue: (key: number) => {
-      return selectedValues[key] !== 0;
-    },
-    canSubmit: !selectedValues.includes(0),
-    postSelectedMutate,
-    selectedInfo,
+const SecondPage = ({ selectedValues, postSelectedMutate }: IProps) => {
+  const questionIdx = useRecoilValue(questionIdxState);
+
+  const submit = () => !selectedValues.includes(0) && postSelectedMutate();
+
+  const questions = QUESTIONS.slice(4, questionIdx);
+
+  const isCompleted = !selectedValues.includes(0);
+
+  const pageProps: ISecondPageProps = {
+    submit,
+    questions,
+    isCompleted,
   };
 
-  return <SecondPageView {...PageProps} />;
+  return <VSecondPage {...pageProps} />;
 };
 
 export default SecondPage;

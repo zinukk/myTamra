@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { IResult, IResultProps } from '@src/types/result';
 import ResultAPI from '@src/api/result';
 import SEO from '@src/components/common/SEO';
-import ResultView from '@src/components/result/Views/ResultView';
+import VResult from '@src/components/result/vac/VResult';
 
 export async function getServerSideProps(context: any) {
   const coast = context.params.coast;
@@ -32,7 +32,7 @@ const Result = ({ result }: IResult) => {
   return (
     <>
       <SEO title="결과 페이지" />
-      <ResultView {...ResultProps} />
+      <VResult {...ResultProps} />
     </>
   );
 };

@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import Image from 'next/image';
 import { IContent, IFitProps } from '@src/types/result';
 
-const FitView = ({ CONTENTS }: IFitProps) => {
+const VFit = ({ CONTENTS }: IFitProps) => {
   return (
     <StFit>
       <StBody>
@@ -50,4 +50,4 @@ const StType = styled.p`
   font-size: 20px;
 `;
 
-export default FitView;
+export default VFit;

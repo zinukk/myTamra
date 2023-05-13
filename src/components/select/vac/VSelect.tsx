@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { ISelectProps } from '@src/types/select';
 
-const SelectView = ({ pages, pageIdx }: ISelectProps) => {
+const VSelect = ({ pages, pageIdx }: ISelectProps) => {
   return (
     <StSelect>
       <StHeader>가장 나다운 말을 선택해주세요</StHeader>
@@ -33,4 +33,4 @@ const StBody = styled.div`
   width: 100%;
 `;
 
-export default SelectView;
+export default VSelect;

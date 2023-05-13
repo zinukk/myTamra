@@ -3,10 +3,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.min.css';
 import 'swiper/components/navigation/navigation.min.css';
 import { IResultProps } from '@src/types/result';
-import ResultList from '../ResultList';
 import Modal from '@src/components/common/Modal';
+import ResultList from '../ResultList';
 
-const ResultView = ({ openModal, setOpenModal, present, future }: IResultProps) => {
+const VResult = ({ openModal, setOpenModal, present, future }: IResultProps) => {
   return (
     <StResult isModalOpen={openModal}>
       <Swiper>
@@ -30,4 +30,4 @@ const StResult = styled.div<{ isModalOpen: boolean }>`
   background: ${({ theme }) => theme.color.backgroundColor};
 `;
 
-export default ResultView;
+export default VResult;

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { IClipboardProps } from '@src/types/result';
-import ClipboardView from './Views/ClipboardView';
+import ClipboardView from './vac/VClipboard';
 
 const Clipboard = () => {
   const [copyUrl, setCopyUrl] = useState<boolean>(false);

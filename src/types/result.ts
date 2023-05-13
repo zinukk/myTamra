@@ -26,7 +26,10 @@ export interface IPlace {
 }
 
 export interface Result {
-  dateType: string;
+  time: string;
+  future: boolean;
+  date: string;
+  dateType?: string;
   coastalName: string;
   coastalImage: string;
   coastalContent: string;
@@ -74,7 +77,7 @@ export interface IKakaoShareProps {
 }
 
 export interface IPlaceProps {
-  dateType: string;
+  future: boolean;
   place: IPlace[];
   pageHandler: (url: string) => void;
 }

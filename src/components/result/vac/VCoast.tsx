@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import Image from 'next/image';
 import { ICoastProps } from '@src/types/result';
 
-const CoastView = ({ coastalImage, descriptions }: ICoastProps) => {
+const VCoast = ({ coastalImage, descriptions }: ICoastProps) => {
   return (
     <StCoast>
       <StBody>
@@ -48,4 +48,4 @@ const StDescription = styled.p`
   word-break: keep-all;
 `;
 
-export default CoastView;
+export default VCoast;

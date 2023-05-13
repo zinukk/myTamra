@@ -1,25 +1,19 @@
 import styled from '@emotion/styled';
 import Question from '../../common/Question';
 import NextIcon from '/public/assets/svgs/svgs_active.svg';
-import { FIRST_QUESTION } from '@src/mocks/FIRST_QUESTIONS';
 import { IFirstPageProps } from '@src/types/select';
 
-const FirstPageView = ({ setPageIdx, hasValue }: IFirstPageProps) => {
+const VFirstPage = ({ goNext, iconColor, showNextButton, questions }: IFirstPageProps) => {
   return (
     <StFirstPage>
       <StBody>
-        {FIRST_QUESTION.map(({ id, state, title, button }) => (
-          <div key={id}>{hasValue(id - 1) && <Question state={state} title={title} button={button} />}</div>
+        {questions.map(({ id, state, title, button }) => (
+          <div key={id}>{<Question state={state} title={title} button={button} />}</div>
         ))}
       </StBody>
-      {hasValue(2) && (
+      {showNextButton && (
         <StFooter>
-          <NextIcon
-            fill={hasValue(3) ? '#84F5B8' : '#8A8B91'}
-            onClick={() => {
-              hasValue(3) && setPageIdx((prev: number) => prev + 1);
-            }}
-          />
+          <NextIcon fill={iconColor} onClick={goNext} />
         </StFooter>
       )}
     </StFirstPage>
@@ -43,4 +37,4 @@ const StFooter = styled.div`
   width: 100%;
 `;
 
-export default FirstPageView;
+export default VFirstPage;

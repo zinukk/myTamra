@@ -10,7 +10,7 @@ import SelectAPI from '@src/api/select';
 import SEO from '@src/components/common/SEO';
 import FirstPage from '@src/components/select/FirstPage';
 import SecondPage from '@src/components/select/SecondPage';
-import SelectView from '@src/components/select/Views/SelectView';
+import SelectView from '@src/components/select/vac/VSelect';
 
 const Select = () => {
   const router = useRouter();
@@ -23,7 +23,7 @@ const Select = () => {
 
   const selectedValues: number[] = Object.values(selectedInfo);
 
-  const { mutate: postSelectedMutate } = useMutation((data: ISelectedInfo) => SelectAPI.postSelected(data), {
+  const { mutate: postSelectedMutate } = useMutation(() => SelectAPI.postSelected(selectedInfo), {
     onSuccess: (data: AxiosResponse<IResponse>) => {
       setCoastState(data as unknown as string);
       router.push('/loading');

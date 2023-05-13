@@ -1,5 +1,3 @@
-import { Dispatch, SetStateAction } from 'react';
-
 export interface ISelectProps {
   pageIdx: number;
   pages: JSX.Element[];
@@ -17,18 +15,18 @@ export interface ISelectedInfo {
 }
 
 export interface IPageProps {
-  hasValue: (key: number) => boolean;
-  canSubmit: boolean;
-  setPageIdx: Dispatch<SetStateAction<number>>;
-  selectedInfo: ISelectedInfo;
-  selectedValues: number[];
-  postSelectedMutate: (selectedInfo: ISelectedInfo) => void;
+  iconColor: boolean | string;
+  submit: () => void;
+  goNext: () => void;
+  showNextButton: boolean;
+  questions: Question[];
+  isCompleted: boolean;
 }
 
 export interface IResponse {
   data: string | ((currVal: string) => string);
 }
 
-export type IFirstPageProps = Pick<IPageProps, 'setPageIdx' | 'hasValue'>;
+export type IFirstPageProps = Pick<IPageProps, 'goNext' | 'iconColor' | 'showNextButton' | 'questions'>;
 
-export type ISecondPageProps = Pick<IPageProps, 'hasValue' | 'canSubmit' | 'postSelectedMutate' | 'selectedInfo'>;
+export type ISecondPageProps = Pick<IPageProps, 'submit' | 'questions' | 'isCompleted'>;
