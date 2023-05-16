@@ -20,7 +20,7 @@ const StSelect = styled.div`
   overflow: scroll;
 `;
 
-const StHeader = styled.p`
+const StHeader = styled.header`
   display: flex;
   align-items: center;
   width: 100%;
@@ -29,7 +29,7 @@ const StHeader = styled.p`
   font-size: 16px;
 `;
 
-const StBody = styled.div`
+const StBody = styled.main`
   width: 100%;
 `;
 

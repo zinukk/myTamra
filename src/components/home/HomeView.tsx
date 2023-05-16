@@ -10,7 +10,7 @@ const HomeView = ({ pageHandler }: IHomeProps) => {
   return (
     <StHome MainBg={MainBg} onClick={pageHandler}>
       <StHeader>
-        <Image src={MainLogo} width={300} height={150} alt="로고" />
+        <Image src={MainLogo} width={329} height={158} alt="로고" />
       </StHeader>
       <Snowfall snowflakeCount={60} />
       <StFooter MainText={MainText} />
@@ -28,14 +28,14 @@ const StHome = styled.div<{ MainBg: IImage }>`
   cursor: pointer;
 `;
 
-const StHeader = styled.div`
+const StHeader = styled.header`
   position: absolute;
   top: 23%;
   left: 50%;
   transform: translate(-50%, -50%);
 `;
 
-const StFooter = styled.div<{ MainText: IImage }>`
+const StFooter = styled.footer<{ MainText: IImage }>`
   position: absolute;
   bottom: 5%;
   left: 50%;

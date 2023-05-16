@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { Result } from '@src/types/result';
-import { convertDate } from '@src/utils/convertDate';
 import CircleImg from '/public/assets/images/image_circle.png';
 import Image from 'next/image';
 import React from 'react';

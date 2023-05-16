@@ -23,11 +23,11 @@ const StSecondPage = styled.div`
   width: 100%;
 `;
 
-const StBody = styled.div`
+const StBody = styled.main`
   width: 100%;
 `;
 
-const StFooter = styled.div`
+const StFooter = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;

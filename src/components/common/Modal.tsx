@@ -30,7 +30,7 @@ const StModal = styled.div`
   z-index: 100;
 `;
 
-const StBody = styled.div`
+const StBody = styled.main`
   position: absolute;
   top: 50%;
   left: 50%;

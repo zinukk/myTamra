@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
 import { useRecoilValue } from 'recoil';
 import Spinner from '/public/assets/images/image_spinner.gif';
+import SEO from '@src/components/common/SEO';
 
 const Loading = () => {
   const coast = useRecoilValue(coastState);
@@ -18,14 +19,17 @@ const Loading = () => {
   });
 
   return (
-    <StLoading>
-      <StBody>
-        <Image src={Spinner} alt="스피너 이미지" width={183} height={145} />
-        <StText>
-          현재와 미래의 <br /> 나의 모습을 만들고 있어요
-        </StText>
-      </StBody>
-    </StLoading>
+    <>
+      <SEO title="로딩 페이지" />
+      <StLoading>
+        <StBody>
+          <Image src={Spinner} alt="스피너 이미지" width={183} height={145} />
+          <StText>
+            현재와 미래의 <br /> 나의 모습을 만들고 있어요
+          </StText>
+        </StBody>
+      </StLoading>
+    </>
   );
 };
 

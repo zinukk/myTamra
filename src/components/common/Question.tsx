@@ -43,14 +43,14 @@ const StQuestion = styled.div`
   width: 100%;
 `;
 
-const StHeader = styled.p`
+const StHeader = styled.h1`
   margin: 8px 0;
   color: white;
   font-size: 19px;
   font-weight: 600;
 `;
 
-const StBody = styled.div`
+const StBody = styled.main`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
