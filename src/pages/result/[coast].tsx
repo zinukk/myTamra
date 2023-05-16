@@ -31,7 +31,7 @@ const Result = ({ result }: IResult) => {
 
   return (
     <>
-      <SEO title="결과 페이지" />
+      <SEO title="결과" />
       <VResult {...ResultProps} />
     </>
   );

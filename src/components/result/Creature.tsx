@@ -36,12 +36,12 @@ const StCreature = styled.div`
   width: 100%;
 `;
 
-const StHeader = styled.div`
+const StHeader = styled.header`
   margin-bottom: 20px;
   width: 100%;
 `;
 
-const StBody = styled.div<{ isOne: boolean }>`
+const StBody = styled.main<{ isOne: boolean }>`
   display: flex;
   justify-content: flex-start;
   align-items: center;

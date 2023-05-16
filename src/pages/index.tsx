@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <>
-      <SEO title="나의 탐라" />
+      <SEO title="홈" />
       <HomeView {...HomeProps} />
     </>
   );

@@ -30,7 +30,7 @@ const StLocation = styled.div`
   width: 100%;
 `;
 
-const StHeader = styled.div`
+const StHeader = styled.header`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -49,7 +49,7 @@ const StLocationText = styled.p`
   font-size: 15px;
 `;
 
-const StBody = styled.div`
+const StBody = styled.main`
   position: relative;
   margin: 40px auto;
   width: 270px;

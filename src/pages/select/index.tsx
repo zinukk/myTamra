@@ -32,12 +32,7 @@ const Select = () => {
 
   const pages: JSX.Element[] = [
     <FirstPage key={0} selectedValues={selectedValues} setPageIdx={setPageIdx} />,
-    <SecondPage
-      key={1}
-      selectedInfo={selectedInfo}
-      selectedValues={selectedValues}
-      postSelectedMutate={postSelectedMutate}
-    />,
+    <SecondPage key={1} selectedValues={selectedValues} postSelectedMutate={postSelectedMutate} />,
   ];
 
   const SelectProps: ISelectProps = {

@@ -42,11 +42,11 @@ const StCampaign = styled.div`
   width: 100%;
 `;
 
-const StHeader = styled.div`
+const StHeader = styled.header`
   width: 100%;
 `;
 
-const StBody = styled.div`
+const StBody = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
