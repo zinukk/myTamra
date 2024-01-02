@@ -1,7 +1,5 @@
 REPOSITORY=/home/ubuntu/deploy
 
-cd $REPOSITORY 
+cd $REPOSITORY
 
-sudo yarn install
-
-sudo pm2 start yarn --name "myTamra" --interpreter bash --watch -- start
+yarn deploy
