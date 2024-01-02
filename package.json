@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "deploy": "pm2 start ecosystem.config.js --env production"
+    "lint": "next lint"
   },
   "dependencies": {
     "@emotion/babel-preset-css-prop": "^11.10.0",
